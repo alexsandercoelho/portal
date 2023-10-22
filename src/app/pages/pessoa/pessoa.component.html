@@ -1,0 +1,94 @@
+<navbar></navbar>
+<sidebar></sidebar>
+
+<div class="container-base">
+  <div class="content-page">
+    <div class="card-header">
+      <div class="card-title">Gestão de Pessoas</div>
+    </div>
+
+    <div class="card">
+      <p-table
+        [columns]="cols"
+        [value]="pessoas"
+        [tableStyle]="{ 'min-width': '50rem' }"
+      >
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns">
+              {{ col.header }}
+            </th>
+            <th style="text-align: center">Ações</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr>
+            <td *ngFor="let col of columns">
+              {{ rowData[col.field] }}
+            </td>
+            <td>
+              <div style="display: flex; gap: 1rem; justify-content: center">
+                <p-button
+                  (click)="showDialogCreate()"
+                  icon="pi pi-plus"
+                  styleClass="p-button-rounded p-button-text"
+                ></p-button>
+
+                <p-button
+                  (click)="showDialogEdit()"
+                  icon="pi pi-file-edit"
+                  styleClass="p-button-rounded p-button-secondary p-button-text"
+                ></p-button>
+                <p-button
+                  (disable)="showDialogDelete()"
+                  icon="pi pi-trash"
+                  styleClass="p-button-danger p-button-text"
+                ></p-button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+<p-dialog
+  header="Adicionar Pessoas"
+  [(visible)]="visible"
+    [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '50vw',height: '55vh' }"
+    [draggable]="false"
+    [resizable]="false"
+>
+  <div class="container-form">
+    <div class="group-input">
+
+      <div class="text-info">ID</div>
+      <input
+        class="input-form"
+        type="text"
+        name="ID"
+        id="IDPessoa"
+        placeholder="ID"
+        required=""
+      />
+       <div class="text-info">Nome</div>
+       <input
+        class="input-form"
+        type="text"
+        name="Nome"
+        id="Nome"
+        placeholder="Nome"
+        required=""
+      />
+    </div>
+
+    <!-- formControlName="IDPessoa" -->
+    <div class="group-input">
+      <div class="text-info">Perfil</div>
+      <p-dropdown [options]="perfils" class="input-form">
+      </p-dropdown>
+      <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
+    </div>
+  </div>
+  </p-dialog>

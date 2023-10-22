@@ -1,0 +1,87 @@
+<navbar></navbar>
+<sidebar></sidebar>
+<div class="container-base">
+
+
+  <div class="content-page">
+    <div class="card-header">
+        <div class="card-title">
+            Grupos de Distribuição
+        </div>
+</div>
+
+<div class="card">
+  <p-table [columns]="cols" [value]="grupos" styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+              <th *ngFor="let col of columns">
+                  {{ col.header }}
+              </th>
+              <th style="text-align: center">Ações</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr>
+              <td *ngFor="let col of columns">
+                  {{ rowData[col.field] }}
+              </td>
+              <td>
+                <div style="display: flex; gap: 1rem; justify-content: center">
+                  <p-button
+                    (click)="showDialogCreate()"
+                    icon="pi pi-plus"
+                    styleClass="p-button-rounded p-button-text"
+                  ></p-button>
+
+                  <p-button
+                    (onClick)="showDialogEdit()"
+                    icon="pi pi-file-edit"
+                    styleClass="p-button-rounded p-button-secondary p-button-text"
+                  ></p-button>
+
+                  <p-button
+                    (onClick)="showDialogDelete()"
+                    icon="pi pi-trash"
+                    styleClass="p-button-danger p-button-text"
+                  ></p-button>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+  <p-dialog
+    header="Adicionar Grupos Distribuição"
+    [(visible)]="visible"
+    [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '50vw' }"
+    [draggable]="false"
+    [resizable]="false"
+  >
+    <div class="container-form">
+      <div class="group-input">
+
+        <div class="text-info">Nome Grupo</div>
+        <input
+          class="input-form"
+          type="text"
+          name="NomeGrupo"
+          id="NomeGrupo"
+          placeholder="Nome"
+          required=""
+        />
+         <div class="text-info">Propriedade Comparação</div>
+         <input
+          class="input-form"
+          type="text"
+          name="PropriedadeComparacao"
+          id="PropriedadeComparacao"
+          placeholder="Propriedade"
+          required=""
+        />
+        <p-button icon="pi pi-save" styleClass="p-button-rounded p-button-text"></p-button>
+      </div>
+    </div>
+  </p-dialog>
