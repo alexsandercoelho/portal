@@ -9,6 +9,7 @@ import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
+import { PrimeIcons } from 'primeng/api';
 
 @NgModule(
     {

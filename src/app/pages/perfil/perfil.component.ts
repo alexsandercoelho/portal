@@ -38,10 +38,9 @@ export class PerfilComponent {
   }
   showDialogCreate(){
     this.visible = true;
-
   }
   showDialogEdit(){
-    this.visible = false;
+    this.visible = true;
   }
   showDialogDelete(){
     this.visible = true;

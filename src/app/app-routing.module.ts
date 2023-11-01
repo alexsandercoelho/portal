@@ -38,7 +38,7 @@ const routes: Routes = [
   {
     path: 'regrasdistribuicao',
     loadChildren: () => import('./pages/regra/regra.module').then(m => m.RegraModule),
-  }
+  },
 ];
 
 @NgModule({
