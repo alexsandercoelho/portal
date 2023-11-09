@@ -1,4 +1,4 @@
-import { RegraService } from './../../services/regra.service';
+import { RegraService } from '../../services/regra.service';
 import { Component } from '@angular/core';
 import { Message } from 'primeng/api'
 

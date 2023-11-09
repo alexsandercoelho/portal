@@ -40,10 +40,10 @@ export class PerfilComponent {
     this.visible = true;
   }
   showDialogEdit(){
-    this.visible = true;
+    this.visible = false;
   }
   showDialogDelete(){
-    this.visible = true;
+    this.visible = false;
     console.log(this.perfils)
     alert("Excluído com Sucesso!")
   }

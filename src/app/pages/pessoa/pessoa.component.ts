@@ -45,7 +45,7 @@ export class PessoaComponent {
     this.visible = false;
   }
   showDialogDelete(){
-    this.visible = true;
+    this.visible = false;
     console.log(this.pessoas)
     alert("Excluído com Sucesso!")
   }
