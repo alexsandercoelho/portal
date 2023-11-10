@@ -83,17 +83,17 @@
   </div>
   <div class="group-input">
     <div class="text-info">Nome Pacote</div>
-    <p-dropdown []="" class="input-form">
+    <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
   <div class="text-info">Versao Pacote</div>
-    <p-dropdown []="" class="input-form">
+    <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
   <div class="text-info">Grupo Distribuição</div>
-    <p-dropdown []="" class="input-form">
+    <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
 </p-dialog>
