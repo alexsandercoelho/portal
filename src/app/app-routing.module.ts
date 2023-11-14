@@ -1,3 +1,4 @@
+import { EarlybirdsModule } from './pages/earlybirds/earlybirds.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
@@ -36,8 +37,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/grupo/grupo.module').then(m => m.GrupoModule),
   },
   {
-    path: 'regrasdistribuicao',
-    loadChildren: () => import('./pages/regra/regra.module').then(m => m.RegraModule),
+    path: 'earlybirds',
+    loadChildren: () => import('./pages/earlybirds/earlybirds.module').then(m => m.EarlybirdsModule),
+  },
+  {
+    path: 'flags',
+    loadChildren: () => import('./pages/flags/flags.module').then(m => m.FlagsModule),
+  },
+  {
+    path: 'mudancas',
+    loadChildren: () => import('./pages/mudanca/mudanca.module').then(m => m.MudancaModule),
   }
 ];
 

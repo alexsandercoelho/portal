@@ -8,7 +8,6 @@
           </div>
       </div>
   </div>
-
   <div class="grupo-menu">
       <div class="container-icone-menu">
           <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(2)"
@@ -17,7 +16,6 @@
           </div>
       </div>
   </div>
-
   <div class="grupo-menu">
       <div class="container-icone-menu">
           <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(3)"
@@ -35,7 +33,6 @@
           </div>
       </div>
   </div>
-
   <div class="grupo-menu">
     <div class="container-icone-menu">
         <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(5)"
@@ -44,13 +41,34 @@
         </div>
     </div>
   </div>
-
   <div class="grupo-menu">
     <div class="container-icone-menu">
         <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(6)"
             [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 6, '':this.menuService.menuSelecionado!= 6}">
             Regras Distribuição
         </div>
+    </div>
+  </div>
+  <div class="grupo-menu">
+    <div class="container-icone-menu">
+        <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(7)"
+            [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 7, '':this.menuService.menuSelecionado!= 7}">
+            Early Birds
+        </div>
+    </div>
+  </div>
+  <div class="grupo-menu">
+    <div class="container-icone-menu">
+        <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(8)"
+            [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 8, '':this.menuService.menuSelecionado!=8}">
+            Gestao de Flags
+    </div>
+  </div>
+  <div class="grupo-menu">
+    <div class="container-icone-menu">
+        <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(9)"
+            [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 9, '':this.menuService.menuSelecionado!= 9}">
+            Gestao Mudanças
     </div>
   </div>
 </div>

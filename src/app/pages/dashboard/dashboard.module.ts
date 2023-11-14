@@ -14,7 +14,7 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
             CommonModule,
             DashboardRoutingModule,
             NavbarModule,
-            SidebarModule
+            SidebarModule,
         ]
     }
 )

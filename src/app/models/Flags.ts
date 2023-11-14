@@ -1,4 +1,4 @@
-export class Grupo
+export class Gestaoflags
 {
     IdGrup?: number;
     NomeGrupo?:string;

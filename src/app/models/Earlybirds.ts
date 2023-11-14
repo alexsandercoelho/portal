@@ -1,12 +1,11 @@
-export class Grupo
+export class Earlybirds
 {
-    IdGrup?: number;
-    NomeGrupo?:string;
-    QtdPessoas?: number;
-    VersoesAssociadas?:string;
-    Propriedade?:String
-    DataInclusao?:Date;
-    DataAtualizacao?: Date;
+    NomeGrupo?:             string;
+    QuantidadePessoas?:     number;
+    VersoesAssociadas?:     string;
+    PropriedadeComparacao?: String
+    DataInclusao?:          Date;
+    DataAtualizacao?:       Date;
 }
 /*
 Mock

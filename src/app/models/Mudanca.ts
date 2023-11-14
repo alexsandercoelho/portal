@@ -1,4 +1,4 @@
-export class Grupo
+export class Mudanca
 {
     IdGrup?: number;
     NomeGrupo?:string;
