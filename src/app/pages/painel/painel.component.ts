@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
-  selector: 'app-dashfeature',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-painel',
+  templateUrl: './painel.component.html',
+  styleUrls: ['./painel.component.scss']
 })
-export class DashboardComponent {
+export class PainelComponent {
 
   constructor(public menuService: MenuService) {
   }

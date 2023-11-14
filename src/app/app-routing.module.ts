@@ -17,6 +17,10 @@ const routes: Routes = [
     path: '', component: LoginComponent
   },
   {
+    path: 'painel',
+    loadChildren: () => import('./pages/painel/painel.module').then(m => m.PainelModule),
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule),
   },

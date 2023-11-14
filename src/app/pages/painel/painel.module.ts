@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
+import { PainelComponent } from './painel.component';
+import { PainelRoutingModule } from './painel-routing.module';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
+import { ButtonModule} from 'primeng/button'
 
 
 @NgModule(
     {
         providers:[],
-        declarations:[DashboardComponent],
+        declarations:[PainelComponent],
         imports:[
             CommonModule,
-            DashboardRoutingModule,
+            PainelRoutingModule,
             NavbarModule,
             SidebarModule,
+            ButtonModule
         ]
     }
 )
 
-export class DashboardModule{}
+export class PainelModule{}

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FlagsComponent } from './flags.component';
+import { PainelComponent } from './painel.component';
 
 const routes: Routes = [{
-    path: 'painel',
-    component: FlagsComponent,
+    path: '',
+    component: PainelComponent,
   }];
 
   @NgModule({
@@ -12,4 +12,4 @@ const routes: Routes = [{
     exports: [RouterModule]
   })
 
-  export class FlagsRoutingModule{}
+  export class PainelRoutingModule{}
