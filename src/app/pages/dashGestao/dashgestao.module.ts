@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashGestaoComponent } from './dashgestao.component';
+import { DashGestaoRoutingModule } from './dashgestao-routing.module';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
 
@@ -9,14 +9,14 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
 @NgModule(
     {
         providers:[],
-        declarations:[DashboardComponent],
+        declarations:[DashGestaoComponent],
         imports:[
             CommonModule,
-            DashboardRoutingModule,
+            DashGestaoRoutingModule,
             NavbarModule,
             SidebarModule,
         ]
     }
 )
 
-export class DashboardModule{}
+export class DashGestaoModule{}

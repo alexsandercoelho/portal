@@ -17,7 +17,7 @@ export class SidebarComponent {
   selectMenu(menu: number) {
     switch (menu) {
       case 1:
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/dashgestao']);
         break;
 
       case 2:
@@ -41,16 +41,20 @@ export class SidebarComponent {
         break;
 
       case 7:
-        this.router.navigate(['/earlybirds']);
+        this.router.navigate(['/dashfeature']);
         break;
 
       case 8:
-        this.router.navigate(['/flags']);
+        this.router.navigate(['/earlybirds']);
         break;
 
       case 9:
-        this.router.navigate(['/mudancas']);
+        this.router.navigate(['/flags']);
         break;
+
+      case 10:
+          this.router.navigate(['/mudancas']);
+          break;
 
       default:
         break;

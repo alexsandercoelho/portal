@@ -1,0 +1,36 @@
+<navbar></navbar>
+<div class="container-sidebar">
+
+  <div class="grupo-menu">
+    <div class="container-icone-menu">
+        <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(7)"
+            [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 7, '':this.menuService.menuSelecionado!= 7}">
+            Dashboard
+        </div>
+    </div>
+</div>
+<div class="grupo-menu">
+  <div class="container-icone-menu">
+      <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(8)"
+          [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 8, '':this.menuService.menuSelecionado!= 8}">
+          Early Birds
+      </div>
+  </div>
+</div>
+<div class="grupo-menu">
+  <div class="container-icone-menu">
+      <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(9)"
+          [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 9, '':this.menuService.menuSelecionado!= 9}">
+          Gestao de Flags
+      </div>
+  </div>
+</div>
+<div class="grupo-menu">
+  <div class="container-icone-menu">
+      <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(10)"
+          [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 10, '':this.menuService.menuSelecionado!= 10}">
+          Gestao Mudanças
+      </div>
+  </div>
+</div>
+

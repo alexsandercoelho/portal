@@ -3,10 +3,10 @@ import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-dashfeature',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  templateUrl: './dashgestao.component.html',
+  styleUrls: ['./dashgestao.component.scss']
 })
-export class DashboardComponent {
+export class DashGestaoComponent {
 
   constructor(public menuService: MenuService) {
   }

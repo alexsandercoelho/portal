@@ -21,8 +21,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/painel/painel.module').then(m => m.PainelModule),
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+    path: 'dashgestao',
+    loadChildren: () => import('./pages/dashGestao/dashgestao.module').then(m => m.DashGestaoModule),
+  },
+  {
+    path: 'dashfeature',
+    loadChildren: () => import('./pages/dashFeature/dashfeature.module').then(m => m.DashFeatureModule),
   },
   {
     path: 'gestaoperfil',

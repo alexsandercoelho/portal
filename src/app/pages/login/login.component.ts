@@ -40,7 +40,8 @@ export class LoginComponent {
 
     this.loginService.login(this.dadosForm["email"].value, this.dadosForm["senha"].value).subscribe(
       token => {
-        this.router.navigate(['/dashgestao']);
+      //  this.router.navigate(['/dashgestao']);
+      this.router.navigate(['/painel']);
       },
       err => {
         alert('Ocorreu um erro');

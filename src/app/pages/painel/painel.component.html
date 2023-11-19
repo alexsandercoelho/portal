@@ -1,6 +1,26 @@
-<div class="container-login">
+<div class="container-painel">
 
-  <div class="container-login-central">
-    <p>incluir botao</p>
-  </div>
+  <div class="container-painel-central">
+
+      <div class="container-header">
+          <div class="titulo-painel">
+              Menu
+          </div>
+          <div class="info-painel">
+              Escolha seu Painel
+          </div>
+
+      </div>
+
+
+      <div class="container-form">
+              <div class="group-input">
+                <input type="submit" class="btn-painel" [disabled]="true"(onclick)="showDashGestao" value="Gestao de Acessos"/>
+                <input type="submit" class="btn-painel" [disabled]="true"(onclick)="showDashFeature" value="Feature Flags"/>
+              </div>
+      </div>
+
+
+    </div>
 </div>
+
