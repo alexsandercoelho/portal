@@ -7,30 +7,34 @@ import { Router } from '@angular/router';
   templateUrl: './dashfeature.component.html',
   styleUrls: ['./dashfeature.component.scss']
 })
-export class DashFeatureComponent {
-constructor(private router: Router, public menuService: MenuService) {
 
-}
+export class DashFeatureComponent {
+
+  constructor(private router: Router, public menuService: MenuService) {
+
+  }
+
   selectMenu(menu: number) {
     switch (menu) {
-
-      case 7:
-        this.router.navigate(['/earlybirds']);
+      case 0:
+        this.router.navigate(['/painel']);
         break;
 
       case 8:
-        this.router.navigate(['/flags']);
+        this.router.navigate(['/earlybirds']);
         break;
 
       case 9:
-        this.router.navigate(['/mudancas']);
+        this.router.navigate(['/flags']);
         break;
+
+      case 10:
+          this.router.navigate(['/mudancas']);
+          break;
 
       default:
         break;
     }
-
-    this.menuService.menuSelecionado = menu;
 
   }
 

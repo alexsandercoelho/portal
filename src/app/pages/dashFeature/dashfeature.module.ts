@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DashFeatureComponent } from './dashfeature.component';
 import { DashFeatureRoutingModule } from './dashfeature-routing.module';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
-import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
 
 
 @NgModule(
@@ -14,7 +13,6 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
             CommonModule,
             DashFeatureRoutingModule,
             NavbarModule,
-            SidebarModule,
         ]
     }
 )
