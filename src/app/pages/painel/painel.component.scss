@@ -65,9 +65,7 @@
     opacity: 0.9;
   }
 }
-
-
-.btn-painel {
+.btn-GA, .btn-FF {
   margin-top: 16px;
   display: flex;
   align-items: center;
@@ -86,29 +84,18 @@
   color: #fefefe;
   text-align: center;
 }
-.button {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 25px;
-  width: 375px;
-  height: 72px;
-  border: 0px solid;
-  border-radius: 5px;
-  background: #27ae60;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  color: #fefefe;
-  text-align: center;
+
+.btn-GA:hover {
+  background: #1b212d ;
+}
+
+.btn-FF:hover {
+  background: #1b212d ;
 }
 
 
 
 .disabled
 {
-  opacity: 0.9;
+  opacity: 1;
 }

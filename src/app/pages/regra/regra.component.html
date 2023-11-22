@@ -1,6 +1,5 @@
 <navbar></navbar>
 <sidebar></sidebar>
-
 <div class="container-base">
 
   <div class="content-page">
@@ -60,10 +59,9 @@
     [resizable]="false"
 >
 <div class="container-form">
-  <div class="group-input">
-
-    <div class="text-info">ID</div>
-    <input
+<div class="group-input">
+  <div class="text-info">ID</div>
+  <input
       class="input-form"
       type="text"
       name="ID"
@@ -80,7 +78,6 @@
       placeholder="Nome"
       required=""
     />
-  </div>
 
   <div class="group-input">
     <div class="text-info">Nome Pacote</div>
@@ -88,15 +85,38 @@
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
+
   <div class="text-info">Versao Pacote</div>
     <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
+
   <div class="text-info">Grupo Distribuição</div>
     <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
-</p-dialog>
 
+  <div class="text-info">Data Inclusao</div>
+    <input
+    class="input-form"
+    type="text"
+    name="Data Inclusao"
+    id="Data Inclusao"
+    placeholder="Data Inclusao"
+    required=""
+  />
+
+  <div class="text-info">Data Atualizacao</div>
+    <input
+    class="input-form"
+    type="text"
+    name="Data Atualizacao"
+    id="Data Atualizacao"
+    placeholder="Data Atualizacao"
+    required=""
+  />
+
+</div>
+</p-dialog>
 

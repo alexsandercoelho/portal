@@ -40,7 +40,7 @@ export class SidebarComponent {
         break;
 
       case 7:
-        this.router.navigate(['/regrasdistribuicao']);
+        this.router.navigate(['/regras']);
         break;
 
       default:

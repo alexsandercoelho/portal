@@ -28,13 +28,13 @@ export class EarlybirdsComponent {
       ];
   }
   showDialogCreate(){
-    this.visible = false;
+    this.visible = true;
   }
   showDialogEdit(){
-    this.visible = true;
+    this.visible = false;
   }
   showDialogDelete(){
-    this.visible = true;
+    this.visible = false;
     alert("Excluído com Sucesso!")
     this.visible = false;
   }

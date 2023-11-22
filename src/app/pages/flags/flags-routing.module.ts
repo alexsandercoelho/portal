@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FlagsComponent } from './flags.component';
 
 const routes: Routes = [{
-    path: 'painel',
+    path: '',
     component: FlagsComponent,
   }];
 

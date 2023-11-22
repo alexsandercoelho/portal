@@ -1,4 +1,4 @@
-export interface Regra
+export class Regra
 {
     IdRegra?: string;
     NomeRegra?: string;

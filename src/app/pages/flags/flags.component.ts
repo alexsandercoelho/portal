@@ -30,7 +30,7 @@ export class FlagsComponent {
       ];
   }
   showDialogCreate(){
-    this.visible = false;
+    this.visible = true;
   }
   showDialogEdit(){
     this.visible = true;

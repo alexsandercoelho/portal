@@ -1,10 +1,10 @@
-export class Gestaoflags
+export class Flags
 {
     IdGrup?: number;
-    NomeGrupo?:string;
-    QtdPessoas?: number;
-    VersoesAssociadas?:string;
-    Propriedade?:String
+    NomeFlags?:string;
+    Chave?: string;
+    Situacao?:boolean;
+    EarlyBirds?:String
     DataInclusao?:Date;
     DataAtualizacao?: Date;
 }

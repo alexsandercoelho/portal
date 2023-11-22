@@ -112,7 +112,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     DialogModule,
     DropdownModule,
     PanelMenuModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,12 +21,4 @@ export class PainelComponent {
     this.menuService.menuSelecionado = 1;
   }
 
-  showDashGestao(){
-    this['router'].navigate(['/dashgestao']);
-  }
-  showDashFeature(){
-    this['router'].navigate(['/dashfeature']);
-  }
-
-
 }
