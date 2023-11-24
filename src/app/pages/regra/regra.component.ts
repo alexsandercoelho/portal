@@ -16,7 +16,7 @@ export class RegraComponent {
   regras!: any[];
   visible: boolean = false;
   cols!: Column[];
- // messages: Message[] | undefined;
+
 
   constructor(private regraService: RegraService) {}
 

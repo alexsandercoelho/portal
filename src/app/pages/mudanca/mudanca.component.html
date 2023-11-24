@@ -30,12 +30,14 @@
                           icon="pi pi-check-circle"
                           styleClass="p-button-rounded p-button-text"
                           color="green"
+                          (click)="showDialogsalvar()"
                         ></p-button>
 
                         <p-button
                         icon="pi pi-times-circle"
                         styleClass="p-button-rounded p-button-secondary p-button-text"
                         sytle="color:red"
+                        (click)="showDialogexcluir()"
                         ></p-button>
                       </div>
                     </td>
@@ -78,3 +80,33 @@
             </div>
           </div>
         </p-dialog>
+        <p-dialog header="Salvar Mudança" [(visible)]="displayDialogsalvar" [style]="{width: '50%'}">
+          <div style="height: 70px; overflow-y: auto;">
+              <!-- Scrollable content -->
+              <p>Confirma a ação ?</p>
+              <!-- Add more content here -->
+              <!-- ... -->
+          </div>
+          <ng-template pTemplate="footer">
+              <!-- Actions -->
+              <button pButton type="button a" (click)="closeDialogsalvar()" label="Sim"></button>
+              <button pButton type="button b" (click)="closeDialogsalvar()" label="Não"></button>
+              <!-- Add more buttons or actions here -->
+              <!-- ... -->
+          </ng-template>
+      </p-dialog>
+      <p-dialog header="Excluir Mudança" [(visible)]="displayDialogexcluir" [style]="{width: '50%'}">
+        <div style="height: 70px; overflow-y: auto;">
+            <!-- Scrollable content -->
+            <p>Confirma a ação ?</p>
+            <!-- Add more content here -->
+            <!-- ... -->
+        </div>
+        <ng-template pTemplate="footer">
+            <!-- Actions -->
+            <button pButton type="button a" (click)="closeDialogexcluir()" label="Sim"></button>
+            <button pButton type="button b" (click)="closeDialogexcluir()" label="Não"></button>
+            <!-- Add more buttons or actions here -->
+            <!-- ... -->
+        </ng-template>
+    </p-dialog>

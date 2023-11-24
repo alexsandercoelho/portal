@@ -3,15 +3,16 @@ import { MenuService } from 'src/app/services/menu.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashfeature',
+  selector: 'sidebar',
   templateUrl: './dashfeature.component.html',
   styleUrls: ['./dashfeature.component.scss']
 })
 
 export class DashFeatureComponent {
-
   constructor(private router: Router, public menuService: MenuService) {
-
+  }
+  ngOnInit() {
+    this.menuService.menuSelecionado = 0;
   }
 
   selectMenu(menu: number) {

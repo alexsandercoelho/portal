@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EarlybirdsComponent } from './earlybirds.component';
+import { DashFeatureRoutingModule } from '../dashFeature/dashfeature-routing.module';
 
 const routes: Routes = [{
     path: '',
-    component: EarlybirdsComponent,
+    component: EarlybirdsComponent
   }];
 
   @NgModule({

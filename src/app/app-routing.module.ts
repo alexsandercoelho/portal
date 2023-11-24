@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { TableModule } from 'primeng/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { mudancaComponent } from './pages/mudanca/mudanca.component';
 const routes: Routes = [
   {
     path: '',
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'login', component: LoginComponent
   },
+  {
+    path: 'mudanca', component: mudancaComponent
+  },
+
   {
     path: '', component: LoginComponent
   },
@@ -45,7 +50,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/grupo/grupo.module').then(m => m.GrupoModule),
   },
   {
-    path: 'earlybirds',
+   path: 'earlybirds',
     loadChildren: () => import('./pages/earlybirds/earlybirds.module').then(m => m.EarlybirdsModule),
   },
   {

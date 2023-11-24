@@ -8,6 +8,7 @@ import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
+import { DashFeatureModule } from '../dashFeature/dashfeature.module';
 
 @NgModule(
     {
@@ -16,6 +17,7 @@ import { DropdownModule } from 'primeng/dropdown';
         imports: [
             CommonModule,
             EarlybirdsRoutingModule,
+            DashFeatureModule,
             NavbarModule,
             SidebarModule,
             TableModule,

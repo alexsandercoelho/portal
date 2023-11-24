@@ -1,11 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashFeatureComponent } from './dashfeature.component';
+import { EarlybirdsComponent } from '../earlybirds/earlybirds.component';
+import { FlagsComponent } from '../flags/flags.component';
+import { mudancaComponent } from '../mudanca/mudanca.component';
 
-const routes: Routes = [{
+const routes: Routes = [
+  {
     path: '',
-    component: DashFeatureComponent,
-  }];
+    component: DashFeatureComponent
+  },
+  {
+    path: '',
+    component: EarlybirdsComponent
+  },
+  {
+    path: '',
+    component: FlagsComponent
+  },
+  {
+    path: '',
+    component: mudancaComponent
+  },
+];
 
   @NgModule({
     imports: [RouterModule.forChild(routes)],

@@ -6,7 +6,8 @@ interface Column {
   header: string;
 }
 @Component({
-  selector: 'app-earlybirds',
+  //selector: 'app-earlybirds',
+  selector: 'sidebar',
   templateUrl: './earlybirds.component.html',
   styleUrls: ['./earlybirds.component.scss']
 })

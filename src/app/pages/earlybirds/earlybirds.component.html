@@ -1,6 +1,7 @@
 <navbar></navbar>
 <sidebar></sidebar>
 <div class="container-base">
+
   <div class="content-page">
     <div class="card-header">
         <div class="card-title">
@@ -31,6 +32,7 @@
                     styleClass="p-button-rounded p-button-text"
                   >
                   </p-button>
+
                   <p-button
                     (onclick)="showDialogEdit()"
                     icon="pi pi-pencil"
@@ -59,7 +61,7 @@
     [resizable]="false"
   >
     <div class="container-form">
-      <div class="group-input">
+    <div class="group-input">
 
         <div class="text-info">Nome do Grupo</div>
           <input
@@ -70,7 +72,7 @@
             placeholder="Nome"
             required=""
           />
-        </div>
+
         <div class="text-info">Propriedade de Comparação</div>
           <input
             class="input-form"
@@ -81,6 +83,7 @@
             required=""
           />
   </div>
+</div>
   </p-dialog>
 
 

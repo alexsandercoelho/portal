@@ -14,6 +14,8 @@ export class mudancaComponent {
   mudancas!: any[];
   visible: boolean = false;
   cols!: Column[];
+  displayDialogsalvar: boolean = false;
+  displayDialogexcluir: boolean = false;
 
   constructor(private mudancaService: MudancaService) {}
 
@@ -32,6 +34,9 @@ export class mudancaComponent {
   showDialogCreate(){
     this.visible = false;
   }
+  showDialogConfirmation(){
+
+  }
   showDialogEdit(){
     this.visible = true;
   }
@@ -43,5 +48,16 @@ export class mudancaComponent {
   save(){
     alert("Salvo com Sucesso!")
   }
-
+  showDialogsalvar() {
+    this.displayDialogsalvar = true;
+  }
+  closeDialogsalvar() {
+    this.displayDialogsalvar = false;
+  }
+  showDialogexcluir() {
+    this.displayDialogexcluir = true;
+  }
+  closeDialogexcluir() {
+    this.displayDialogexcluir = false;
+  }
 }
