@@ -2,7 +2,6 @@
 <sidebar></sidebar>
 <div class="container-base">
 
-
   <div class="content-page">
     <div class="card-header">
         <div class="card-title">
@@ -11,7 +10,11 @@
 </div>
 
 <div class="card">
-  <p-table [columns]="cols" [value]="grupos" styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+  <p-table
+  [columns]="cols"
+  [value]="grupos"
+  styleClass="p-datatable-striped"
+  [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header" let-columns>
           <tr>
               <th *ngFor="let col of columns">
@@ -81,7 +84,7 @@
           placeholder="Propriedade"
           required=""
         />
-        <p-button icon="pi pi-save" styleClass="p-button-rounded p-button-text"></p-button>
+        <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
       </div>
     </div>
   </p-dialog>

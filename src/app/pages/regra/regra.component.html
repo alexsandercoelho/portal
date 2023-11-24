@@ -1,6 +1,5 @@
 <navbar></navbar>
 <sidebar></sidebar>
-
 <div class="container-base">
 
   <div class="content-page">
@@ -14,6 +13,7 @@
   <p-table
   [columns]="cols"
   [value]="regras"
+  styleClass="p-datatable-striped"
   [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header" let-columns>
           <tr>
@@ -86,17 +86,17 @@
   </div>
   <div class="group-input">
     <div class="text-info">Nome Pacote</div>
-    <p-dropdown [options]="regras" class="input-form">
+    <p-dropdown [options]="" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
   <div class="text-info">Versao Pacote</div>
-    <p-dropdown [options]="regras" class="input-form">
+    <p-dropdown [options]="" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
   <div class="text-info">Grupo Distribuição</div>
-    <p-dropdown [options]="regras" class="input-form">
+    <p-dropdown [options]="" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
 </p-dialog>

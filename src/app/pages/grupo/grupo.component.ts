@@ -41,4 +41,7 @@ export class GrupoComponent {
     console.log(this.grupos)
     alert("Excluído com Sucesso!")
   }
+  save(){
+    alert("Salvo com Sucesso!")
+   }
 }

@@ -43,7 +43,7 @@ export class RegraComponent {
     alert("Excluído com Sucesso!")
   }
   save(){
-    alert("Salvo com Sucesso!")
+   alert("Salvo com Sucesso!")
   }
 
 }
