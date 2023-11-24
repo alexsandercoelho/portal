@@ -1,5 +1,6 @@
+import { MudancaService } from './../../services/mudanca.service';
 import { Component } from '@angular/core';
-import { MudancaService } from 'src/app/services/mudanca.service';
+import { MenuItem, MessageService } from 'primeng/api';
 
 interface Column {
   field: string;
@@ -16,8 +17,12 @@ export class mudancaComponent {
   cols!: Column[];
   displayDialogsalvar: boolean = false;
   displayDialogexcluir: boolean = false;
+  items!: MenuItem[];
+  messageService: any;
 
-  constructor(private mudancaService: MudancaService) {}
+  constructor(private mudancaService: MudancaService)
+    {
+ }
 
   ngOnInit() {
     this.mudancas = this.mudancaService.getMudancasData()
@@ -30,13 +35,12 @@ export class mudancaComponent {
           {field: 'dataInclusao', header: 'Data Inclusao'},
           {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
-  }
-  showDialogCreate(){
-    this.visible = false;
-  }
-  showDialogConfirmation(){
 
   }
+  showDialogCreate(){
+    this.visible = true;
+  }
+
   showDialogEdit(){
     this.visible = true;
   }
@@ -61,3 +65,4 @@ export class mudancaComponent {
     this.displayDialogexcluir = false;
   }
 }
+

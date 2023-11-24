@@ -27,14 +27,19 @@
                     <td>
                       <div style="display: flex; gap: 1rem; justify-content: center">
                         <p-button
+                        (onClick)="showDialogCreate()"
+                        icon="pi pi-plus"
+                        styleClass="p-button-rounded p-button-text"
+                        ></p-button>
+                        <p-button
                           icon="pi pi-check-circle"
                           styleClass="p-button-rounded p-button-text"
-                          color="green"
                           (click)="showDialogsalvar()"
+
                         ></p-button>
 
                         <p-button
-                        icon="pi pi-times-circle"
+                        icon="pi pi-times"
                         styleClass="p-button-rounded p-button-secondary p-button-text"
                         sytle="color:red"
                         (click)="showDialogexcluir()"
@@ -89,8 +94,8 @@
           </div>
           <ng-template pTemplate="footer">
               <!-- Actions -->
-              <button pButton type="button a" (click)="closeDialogsalvar()" label="Sim"></button>
-              <button pButton type="button b" (click)="closeDialogsalvar()" label="Não"></button>
+              <button pButton type="button" (click)="closeDialogsalvar()" label="Sim"></button>
+              <button pButton type="button" (click)="closeDialogsalvar()" label="Não"></button>
               <!-- Add more buttons or actions here -->
               <!-- ... -->
           </ng-template>

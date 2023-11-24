@@ -10,7 +10,6 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DashFeatureModule } from '../dashFeature/dashfeature.module';
 import { mudancaComponent } from './mudanca.component';
-
 @NgModule(
     {
         providers: [],
