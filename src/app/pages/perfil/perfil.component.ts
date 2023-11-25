@@ -13,6 +13,9 @@ interface Column {
 })
 export class PerfilComponent {
   visible: boolean = false;
+  perfilSelecionado: any = {
+    Nome: ""
+  };
   perfils!: any[];
   cols!: Column[];
   funcao!: any[];
@@ -31,7 +34,7 @@ export class PerfilComponent {
 
 
       this.cols = [
-          {field: 'Nome Perfil', header: 'Nome Perfil'},
+          {field: 'Nome_Perfil', header: 'Nome'},
           {field: 'Data Inclusao', header: 'Data Inclusao'},
           {field: 'Data Atualizacao', header: 'Data Atualizacao'}
       ];
@@ -39,8 +42,9 @@ export class PerfilComponent {
   showDialogCreate(){
     this.visible = true;
   }
-  showDialogEdit(){
-    this.visible = false;
+  showDialogEdit(item: any){
+    this.perfilSelecionado = {...item};
+    this.visible = true;
   }
   showDialogDelete(){
     this.visible = false;

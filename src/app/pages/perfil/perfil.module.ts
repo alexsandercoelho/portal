@@ -9,6 +9,7 @@ import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +26,9 @@ import { DropdownModule } from 'primeng/dropdown';
             TableModule,
             ButtonModule,
             DialogModule,
-            DropdownModule
+            DropdownModule,
+            FormsModule,
+            ReactiveFormsModule,
         ]
     }
 )

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environment';
-
+import { Observable } from 'rxjs/internal/Observable';
 
 
 @Injectable({
@@ -9,6 +9,7 @@ import { environment } from 'src/environment';
 })
 
 export class VersaoService {
+  constructor(private httpClient: HttpClient) {}
   getVersoesData(){
     return [
       {
@@ -31,5 +32,17 @@ export class VersaoService {
           }
         ]
       }
+      createVersao(versao: any): Observable<any>{
+        return this.httpClient.post<any>(environment.endPoint+ 'versoes', versao);
+      }
+
+      updateVersao(id : any, updatedVersao: any): Observable<any>{
+        return this.httpClient.put<any>(environment.endPoint + 'versoes/' + id, updatedVersao);
+      }
+
+      deleteVersao(id :any): Observable<any>{
+        return this.httpClient.delete<any>(environment.endPoint + 'versoes/' + id);
+      }
+
   }
 

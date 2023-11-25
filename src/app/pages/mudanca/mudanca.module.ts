@@ -10,6 +10,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DashFeatureModule } from '../dashFeature/dashfeature.module';
 import { mudancaComponent } from './mudanca.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule(
     {
         providers: [],
@@ -25,6 +26,8 @@ import { mudancaComponent } from './mudanca.component';
             DropdownModule,
             ConfirmDialogModule,
             DashFeatureModule,
+            FormsModule,
+            ReactiveFormsModule,
         ]
     }
 )

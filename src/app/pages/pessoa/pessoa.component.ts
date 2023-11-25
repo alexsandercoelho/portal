@@ -15,7 +15,7 @@ interface Column {
 })
 export class PessoaComponent {
   visible: boolean = false;
-  pessoaSelecionada: any = {
+  pessoaSelecionado: any = {
     ID: "",
     Nome: ""
   };
@@ -43,10 +43,10 @@ export class PessoaComponent {
       ];
   }
   showDialogCreate(){
-    this.visible = false;
+    this.visible = true;
   }
   showDialogEdit(item:any){
-    this.pessoaSelecionada = {...item};
+    this.pessoaSelecionado = {...item};
     this.visible = true;
   }
 

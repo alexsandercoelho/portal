@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule(
     {
@@ -23,7 +24,9 @@ import { SplitButtonModule } from 'primeng/splitbutton';
             ButtonModule,
             DialogModule,
             DropdownModule,
-            SplitButtonModule
+            SplitButtonModule,
+            FormsModule,
+            ReactiveFormsModule,
         ]
     }
 )

@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { DashFeatureModule } from '../dashFeature/dashfeature.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule(
     {
@@ -23,7 +24,9 @@ import { DashFeatureModule } from '../dashFeature/dashfeature.module';
             TableModule,
             ButtonModule,
             DialogModule,
-            DropdownModule
+            DropdownModule,
+            FormsModule,
+            ReactiveFormsModule,
         ]
     }
 )

@@ -2,12 +2,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environment';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class RegraService {
+  constructor(private httpClient: HttpClient) {}
     getRegrasData(){
       return [
         {
@@ -38,5 +40,16 @@ export class RegraService {
               "Data Atualizacao": "2023-11-01T17:01:01Z"
             }
         ]
+      }
+      createRegra(regra: any): Observable<any>{
+        return this.httpClient.post<any>(environment.endPoint+ 'regras', regra);
+      }
+
+      updateRegra(id : any, updatedRegra: any): Observable<any>{
+        return this.httpClient.put<any>(environment.endPoint + 'regras/' + id, updatedRegra);
+      }
+
+      deleteRegra(id :any): Observable<any>{
+        return this.httpClient.delete<any>(environment.endPoint + 'regras/' + id);
       }
 }

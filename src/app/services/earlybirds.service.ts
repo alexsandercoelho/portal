@@ -2,6 +2,7 @@ import { Earlybirds } from '../models/Earlybirds';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environment';
+import { Observable } from 'rxjs/internal/Observable';
 
 
 
@@ -10,6 +11,7 @@ import { environment } from 'src/environment';
 })
 
 export class EarlybirdsService {
+  constructor(private httpClient: HttpClient) {}
   getEarlysData(){
     return [
       {
@@ -37,5 +39,15 @@ export class EarlybirdsService {
       }
     ]
   }
+createeEarly(early: any): Observable<any>{
+  return this.httpClient.post<any>(environment.endPoint+ 'earlys', early);
 }
 
+updateEarly(id : any, updatedEarly: any): Observable<any>{
+  return this.httpClient.put<any>(environment.endPoint + 'earlys/' + id, updatedEarly);
+}
+
+deleteEarly(id :any): Observable<any>{
+  return this.httpClient.delete<any>(environment.endPoint + 'earlys/' + id);
+}
+}

@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { CheckboxModule } from 'primeng/checkbox'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule(
@@ -24,7 +25,9 @@ import { CheckboxModule } from 'primeng/checkbox'
             ButtonModule,
             DialogModule,
             DropdownModule,
-            CheckboxModule
+            CheckboxModule,
+            FormsModule,
+            ReactiveFormsModule,
         ]
     }
 )
