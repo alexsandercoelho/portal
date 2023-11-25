@@ -1,12 +1,16 @@
 <navbar></navbar>
 <sidebar></sidebar>
-
 <div class="container-base">
-  <div class="content-page">
-    <div class="card-header">
-      <div class="card-title">Gestão de Pessoas</div>
-    </div>
 
+    <div class="content-page">
+      <div class="card-header">
+        <div class="card-title">
+          Gestão de Pessoas
+        </div>
+    </div>
+    <div class="my-3">
+      <button pButton type="button" onclick="showDialogCreate()">Adicionar</button>
+    </div>
     <div class="card">
       <p-table
         [columns]="cols"
@@ -27,15 +31,8 @@
               {{ rowData[col.field] }}
             </td>
             <td>
-              <div style="display: flex; gap: 1rem; justify-content: center">
                 <p-button
-                  (click)="showDialogCreate()"
-                  icon="pi pi-plus"
-                  styleClass="p-button-rounded p-button-text"
-                ></p-button>
-
-                <p-button
-                  (click)="showDialogEdit()"
+                  (click)="showDialogEdit(rowData)"
                   icon="pi pi-pencil"
                   styleClass="p-button-rounded p-button-secondary p-button-text"
                 ></p-button>
@@ -44,7 +41,6 @@
                   icon="pi pi-trash"
                   styleClass="p-button-danger p-button-text"
                 ></p-button>
-              </div>
             </td>
           </tr>
         </ng-template>
@@ -69,6 +65,7 @@
         type="text"
         name="ID"
         id="IDPessoa"
+        [(ngModel)]="pessoaSelecionada.ID"
         placeholder="ID"
         required=""
       />
@@ -78,6 +75,7 @@
         type="text"
         name="Nome"
         id="Nome"
+        [(ngModel)]="pessoaSelecionada.Nome"
         placeholder="Nome"
         required=""
       />

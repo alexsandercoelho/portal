@@ -1,13 +1,17 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 
+
+
 export class PessoaService {
+  constructor(private httpClient: HttpClient) {}
    getPessoasData(){
     return  [{
       "ID": 1,
@@ -39,5 +43,20 @@ export class PessoaService {
       "Data Inclusao": "2023-11-02T20:01:01Z",
       "Data Atualizacao": "2023-11-02T20:01:01Z"
     }
+
   ]}
+  createPessoa(pessoa: any): Observable<any>{
+    return this.httpClient.post<any>(environment.endPoint+ 'pessoas', pessoa);
+}
+
+updatePessoa(id : any, updatedPessoa: any): Observable<any>{
+    return this.httpClient.put<any>(environment.endPoint + 'pessoas/' + id, updatedPessoa);
+}
+
+deletePessoa(id :any): Observable<any>{
+    return this.httpClient.delete<any>(environment.endPoint + 'pessoas/' + id);
+}
+
+
+
 }

@@ -8,6 +8,8 @@ import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
+import { CheckboxModule } from 'primeng/checkbox'
+
 
 @NgModule(
     {
@@ -21,7 +23,8 @@ import { DropdownModule } from 'primeng/dropdown';
             TableModule,
             ButtonModule,
             DialogModule,
-            DropdownModule
+            DropdownModule,
+            CheckboxModule
         ]
     }
 )

@@ -19,7 +19,6 @@ import { CalendarModule } from 'primeng/calendar';
 import { CarouselModule } from 'primeng/carousel';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { ChartModule } from 'primeng/chart';
-import { CheckboxModule } from 'primeng/checkbox';
 import { ChipModule } from 'primeng/chip';
 import { ChipsModule } from 'primeng/chips';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
@@ -95,6 +94,7 @@ import { CardModule } from 'primeng/card';
 import { BlockUIModule } from 'primeng/blockui';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { DashFeatureModule } from './pages/dashFeature/dashfeature.module';
+import { CheckboxModule } from 'primeng/checkbox'
 
 @NgModule({
   declarations: [
@@ -113,7 +113,8 @@ import { DashFeatureModule } from './pages/dashFeature/dashfeature.module';
     DialogModule,
     DropdownModule,
     PanelMenuModule,
-    DashFeatureModule
+    DashFeatureModule,
+    CheckboxModule,
 
   ],
   providers: [],

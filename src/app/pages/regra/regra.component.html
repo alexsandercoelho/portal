@@ -7,8 +7,10 @@
         <div class="card-title">
             Regras de Distribuição
         </div>
-</div>
-
+    </div>
+    <div class="my-3">
+        <button pButton type="button" onclick="showDialogCreate()">Adicionar</button>
+    </div>
 <div class="card">
   <p-table
   [columns]="cols"
@@ -29,13 +31,6 @@
               {{ rowData[col.field] }}
           </td>
           <td>
-            <div style="display: flex; gap: 1rem; justify-content: center">
-              <p-button
-                (click)="showDialogCreate()"
-                icon="pi pi-plus"
-                styleClass="p-button-rounded p-button-text"
-              ></p-button>
-
               <p-button
                 (click)="showDialogEdit()"
                 icon="pi pi-file-edit"
@@ -46,7 +41,6 @@
                 icon="pi pi-trash"
                 styleClass="p-button-danger p-button-text"
               ></p-button>
-            </div>
           </td>
         </tr>
       </ng-template>
@@ -86,17 +80,17 @@
   </div>
   <div class="group-input">
     <div class="text-info">Nome Pacote</div>
-    <p-dropdown [options]="" class="input-form">
+    <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
   <div class="text-info">Versao Pacote</div>
-    <p-dropdown [options]="" class="input-form">
+    <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
   </div>
   <div class="text-info">Grupo Distribuição</div>
-    <p-dropdown [options]="" class="input-form">
+    <p-dropdown [options]="regras" class="input-form">
     </p-dropdown>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
 </p-dialog>

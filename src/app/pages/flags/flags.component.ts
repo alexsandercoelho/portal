@@ -14,6 +14,7 @@ export class FlagsComponent {
   flags!: any[];
   visible: boolean = false;
   cols!: Column[];
+  checked: boolean = false;
 
   constructor(private flagsService: FlagsService) {}
 

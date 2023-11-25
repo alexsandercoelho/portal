@@ -8,7 +8,9 @@
             Early Birds
         </div>
 </div>
-
+<div class="my-3">
+  <button pButton type="button" onclick="showDialogCreate()">Adicionar</button>
+</div>
 <div class="card">
   <p-table [columns]="cols" [value]="earlys" [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header" let-columns>
@@ -25,14 +27,6 @@
                   {{ rowData[col.field] }}
               </td>
               <td>
-                <div style="display: flex; gap: 1rem; justify-content: center">
-                  <p-button
-                    (onClick)="showDialogCreate()"
-                    icon="pi pi-plus"
-                    styleClass="p-button-rounded p-button-text"
-                  >
-                  </p-button>
-
                   <p-button
                     (onclick)="showDialogEdit()"
                     icon="pi pi-pencil"
@@ -44,7 +38,6 @@
                     icon="pi pi-trash"
                     styleClass="p-button-danger p-button-text"
                   ></p-button>
-                </div>
               </td>
             </tr>
           </ng-template>

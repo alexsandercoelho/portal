@@ -8,7 +8,9 @@
               Gestão de Flags
           </div>
   </div>
-
+  <div class="my-3">
+    <button pButton type="button" onclick="showDialogCreate()">Adicionar</button>
+  </div>
   <div class="card">
     <p-table [columns]="cols" [value]="flags" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="header" let-columns>
@@ -25,14 +27,6 @@
                 {{ rowData[col.field] }}
             </td>
             <td>
-              <div style="display: flex; gap: 1rem; justify-content: center">
-                <p-button
-                  (click)="showDialogCreate()"
-                  icon="pi pi-plus"
-                  styleClass="p-button-rounded p-button-text"
-                  >
-                </p-button>
-
                 <p-button
                   (click)="showDialogEdit()"
                   icon="pi pi-pencil"
@@ -43,7 +37,6 @@
                   styleClass="p-button-danger p-button-text"
                   >
                 </p-button>
-              </div>
             </td>
           </tr>
         </ng-template>
@@ -94,15 +87,23 @@ header="Adicionar Flags"
   <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
 
   <div class="text-info">Situação</div>
+  <div class="checkbox">
     <input
-    class="input-form"
-    type="text"
-    name="situacao"
-    id="situacao"
-    placeholder="situacao"
-    required=""
-  />
+    class="p-checkbox mr-2"
+    type="checkbox"
+    id="true"
+    text="True"
+    label="True"
+    /> True
+  <input
+    class="p-checkbox mr-2"
+    type="checkbox"
+    id="false"
+    label="False"
+    style="display: inline;"
+  />False
   <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
+  </div>
 
   <div class="text-info">Data Inclusao</div>
     <input

@@ -15,13 +15,17 @@ interface Column {
 })
 export class PessoaComponent {
   visible: boolean = false;
+  pessoaSelecionada: any = {
+    ID: "",
+    Nome: ""
+  };
   pessoas!: any[];
   perfils!: any[];
   cols!: Column[];
 
   constructor(
     private pessoaService: PessoaService,
-    private perfilService: PerfilService
+    private perfilService: PerfilService,
     ) {}
 
   ngOnInit() {
@@ -39,18 +43,18 @@ export class PessoaComponent {
       ];
   }
   showDialogCreate(){
+    this.visible = false;
+  }
+  showDialogEdit(item:any){
+    this.pessoaSelecionada = {...item};
     this.visible = true;
   }
-  showDialogEdit(){
-    this.visible = false;
-  }
+
   showDialogDelete(){
     this.visible = false;
-    console.log(this.pessoas)
     alert("Excluído com Sucesso!")
   }
   save(){
-    alert("Salvo com Sucesso!")
   }
 
 }

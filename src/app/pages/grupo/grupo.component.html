@@ -8,7 +8,9 @@
             Grupos de Distribuição
         </div>
 </div>
-
+<div class="my-3">
+  <button pButton type="button" (onClick)="showDialogCreate()">Adicionar</button>
+</div>
 <div class="card">
   <p-table
   [columns]="cols"
@@ -29,13 +31,6 @@
                   {{ rowData[col.field] }}
               </td>
               <td>
-                <div style="display: flex; gap: 1rem; justify-content: center">
-                  <p-button
-                    (onClick)="showDialogCreate()"
-                    icon="pi pi-plus"
-                    styleClass="p-button-rounded p-button-text"
-                  ></p-button>
-
                   <p-button
                   (click)="showDialogEdit()"
                   icon="pi pi-pencil"
@@ -47,14 +42,12 @@
                     icon="pi pi-trash"
                     styleClass="p-button-danger p-button-text"
                   ></p-button>
-                </div>
               </td>
             </tr>
           </ng-template>
         </p-table>
       </div>
     </div>
-  </div>
   <p-dialog
     header="Adicionar Grupos Distribuição"
     [(visible)]="visible"
