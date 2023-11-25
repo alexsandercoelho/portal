@@ -13,6 +13,13 @@ interface Column {
 export class VersaoComponent {
   versoes!: any[];
   visible: boolean = false;
+  versaoSelecionado: any ={
+    ID: "",
+    Nome: "",
+    Versao: "",
+    VersaoMinimaInstalada: "",
+    VersaoMinimaContainer: "",
+  };
   cols!: Column[];
 
   constructor(private versaoService: VersaoService) {}
@@ -23,16 +30,14 @@ export class VersaoComponent {
           {field: 'ID', header: 'ID'},
           {field: 'Nome', header: 'Nome'},
           {field: 'Versao', header: 'Versao'},
-          {field: 'Versao Minima Instalada', header: 'Versao Minima Instalada'},
-          {field: 'Versao Minima Container', header: 'Versao Minima Container'},
-          {field: 'Data Inclusao', header: 'Data Inclusao'},
-          {field: 'Data Atualizacao', header: 'Data Atualizacao'}
+          {field: 'versaoMinimaInstalada', header: 'Versao Minima Instalada'},
+          {field: 'versaoMinimaContainer', header: 'Versao Minima Container'},
+          {field: 'dataInclusao', header: 'Data Inclusao'},
+          {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
   }
-  showDialogCreate(){
-    this.visible = false;
-  }
-  showDialogEdit(){
+  showDialogEdit(item:any){
+    this.versaoSelecionado = {...item};
     this.visible = true;
   }
   showDialogDelete(){

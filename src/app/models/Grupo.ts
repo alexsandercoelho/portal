@@ -1,10 +1,10 @@
 export class Grupo
 {
     IdGrup?: number;
-    NomeGrupo?:string;
-    QtdPessoas?: number;
-    VersoesAssociadas?:string;
-    Propriedade?:String
-    DataInclusao?:Date;
-    DataAtualizacao?: Date;
+    Nome?:string;
+    quantidadePessoas?: number;
+    versoesAssociadas?:string;
+    propriedadeComparacao?:String
+    dataInclusao?:Date;
+    dataAtualizacao?: Date;
 }

@@ -27,7 +27,7 @@
             <td>
               <div style="display: flex; gap: 1rem; justify-content: center">
                 <p-button
-                  (click)="showDialogEdit()"
+                  (click)="showDialogEdit(rowData)"
                   icon="pi pi-pencil"
                   styleClass="p-button-rounded p-button-secondary p-button-text"
                 ></p-button>
@@ -58,8 +58,9 @@ header="Editar Versões"
     <input
     class="input-form"
     type="text"
-    name="Nome"
-    id="Nome"
+    name="ID"
+    id="ID"
+    [(ngModel)]="versaoSelecionado.ID"
     placeholder="Nome"
     required=""
   />
@@ -70,6 +71,7 @@ header="Editar Versões"
     type="text"
     name="Nome"
     id="Nome"
+    [(ngModel)]="versaoSelecionado.Nome"
     placeholder="Nome"
     required=""
   />
@@ -81,6 +83,7 @@ header="Editar Versões"
     name="Versao"
     id="Versao"
     placeholder="Versao"
+    [(ngModel)]="versaoSelecionado.Versao"
     required=""
   />
 
@@ -90,6 +93,7 @@ header="Editar Versões"
     type="text"
     name="versaoMinimaInstalada"
     id="versaoMinimaInstalada"
+    [(ngModel)]="versaoSelecionado.versaoMinimaInstalada"
     placeholder="Versao Minima Instalada"
     required=""
   />
@@ -101,6 +105,7 @@ header="Editar Versões"
     type="text"
     name="versaoMinimaContainer"
     id="versaoMinimaContainer"
+    [(ngModel)]="versaoSelecionado.versaoMinimaContainer"
     placeholder="Versao Minima Container"
     required=""
     />
@@ -112,6 +117,7 @@ header="Editar Versões"
     type="text"
     name="Data Inclusao"
     id="Data Inclusao"
+    [(ngModel)]="versaoSelecionado.dataInclusao"
     placeholder="Data Inclusao"
     required=""
   />
@@ -123,6 +129,7 @@ header="Editar Versões"
     name="Data Atualizacao"
     id="Data Atualizacao"
     placeholder="Data Atualizacao"
+    [(ngModel)]="versaoSelecionado.dataAtualizacao"
     required=""
   />
   <div class="text-info">Destino Instalacao</div>
@@ -132,6 +139,7 @@ header="Editar Versões"
   name="Destino"
   id="Destino"
   placeholder="Destino Instalação"
+  [(ngModel)]="versaoSelecionado.destino"
   required=""
 />
 <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>

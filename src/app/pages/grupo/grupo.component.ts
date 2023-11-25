@@ -15,6 +15,10 @@ export class GrupoComponent {
   grupos!: any[];
   cols!: Column[];
   visible: boolean = false;
+  grupoSelecionado: any = {
+    Nome: "",
+    propriedadeComparacao: "",
+   };
 
   constructor(private grupoService: GrupoService) {}
 
@@ -23,22 +27,22 @@ export class GrupoComponent {
       this.cols = [
           {field: 'ID', header: 'ID'},
           {field: 'Nome', header: 'Nome'},
-          {field: 'Quantidade Pessoas', header: 'Quantidade Pessoas'},
-          {field: 'Versoes Associadas', header: 'Versoes Associadas'},
-          {field: 'Propriedade Comparacao', header: 'Propriedade Comparacao'},
-          {field: 'Data Inclusao', header: 'Data Inclusao'},
-          {field: 'Data Atualizacao', header: 'Data Atualizacao'}
+          {field: 'quantidadePessoas', header: 'Quantidade Pessoas'},
+          {field: 'versoesAssociadas', header: 'Versoes Associadas'},
+          {field: 'propriedadeComparacao', header: 'Propriedade Comparacao'},
+          {field: 'dataInclusao', header: 'Data Inclusao'},
+          {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
   }
   showDialogCreate(){
     this.visible = true;
   }
-  showDialogEdit(){
+  showDialogEdit(item:any){
+    this.grupoSelecionado = {...item};
     this.visible = true;
   }
   showDialogDelete(){
     this.visible = false;
-    console.log(this.grupos)
     alert("Excluído com Sucesso!")
   }
   save(){

@@ -34,7 +34,7 @@ export class PerfilComponent {
 
 
       this.cols = [
-          {field: 'Nome_Perfil', header: 'Nome'},
+          {field: 'Nome', header: 'Nome'},
           {field: 'Data Inclusao', header: 'Data Inclusao'},
           {field: 'Data Atualizacao', header: 'Data Atualizacao'}
       ];

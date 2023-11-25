@@ -16,19 +16,21 @@ export class VersaoService {
           "ID": 1,
           "Nome":"Aplicacao Completa",
           "Versao":"5.4.2",
-          "Versao Minima Instalada": "5.4.1",
-          "Versao Minima Container": "1.4.5",
-          "Data Inclusao": "2023-11-01T17:01:01Z",
-          "Data Atualizacao": "2023-11-01T17:01:01Z"
+          "versaoMinimaInstalada": "5.4.1",
+          "versaoMinimaContainer": "1.4.5",
+          "dataInclusao": "2023-11-01T17:01:01Z",
+          "dataAtualizacao": "2023-11-01T17:01:01Z",
+          "destino": "\\server\devops"
           },
           {
           "ID": 2,
           "Nome":"Modulo de Login",
           "Versao":"1.0.0",
-          "Versao Minima Instalada": "0.0.0",
-          "Versao Minima Container": "1.4.5",
-          "Data Inclusao": "2023-11-01T17:01:01Z",
-          "Data Atualizacao": "2023-11-01T17:01:01Z"
+          "versaoMinimaInstalada": "0.0.0",
+          "versaoMinimaContainer": "1.4.5",
+          "dataInclusao": "2023-11-01T17:01:01Z",
+          "dataAtualizacao": "2023-11-01T17:01:01Z",
+          "destino": "\\server\devops\api"
           }
         ]
       }

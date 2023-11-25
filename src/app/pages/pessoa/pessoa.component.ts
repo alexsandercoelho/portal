@@ -32,7 +32,7 @@ export class PessoaComponent {
     this.pessoas = this.pessoaService.getPessoasData();
     this.perfils = this.perfilService
       .getPerfilsData()
-      .map((pessoa) => pessoa['Nome Perfil']);
+      .map((pessoa) => pessoa['Nome']);
 
 
     this.cols = [

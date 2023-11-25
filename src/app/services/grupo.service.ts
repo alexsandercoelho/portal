@@ -16,29 +16,29 @@ export class GrupoService {
       {
         "ID": 10,
         "Nome":"Grupo A",
-        "Quantidade Pessoas": 50,
-        "Versoes Associadas":"5.4.2,5.4.1,5.0.0",
-        "Propriedade Comparacao": "codigoCliente",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z",
+        "quantidadePessoas": 50,
+        "versoesAssociadas":"5.4.2,5.4.1,5.0.0",
+        "propriedadeComparacao": "codigoCliente",
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z",
         },
         {
         "ID": 20,
         "Nome":"Grupo B",
-        "Quantidade Pessoas": 50,
-        "Versoes Associadas":"5.4.2,5.4.1,5.0.0",
-        "Propriedade Comparacao": "codigoCliente",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z"
+        "quantidadePessoas": 50,
+        "versoesAssociadas":"5.4.2,5.4.1,5.0.0",
+        "propriedadeComparacao": "codigoCliente",
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z"
         },
         {
         "ID": 30,
         "Nome":"Grupo C",
-        "Quantidade Pessoas": 50,
-        "Versoes Associadas":"5.4.2,5.4.1,5.0.0",
-        "Propriedade Comparacao": "codigoCliente",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z"
+        "quantidadePessoas": 50,
+        "versoesAssociadas":"5.4.2,5.4.1,5.0.0",
+        "propriedadeComparacao": "codigoCliente",
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z"
         }
       ]
   }

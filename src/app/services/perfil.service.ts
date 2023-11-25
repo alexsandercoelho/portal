@@ -13,22 +13,22 @@ export class PerfilService {
   constructor(private httpClient: HttpClient) {}
     getPerfilsData(){
       return [{
-        "Nome Perfil": "Administrador",
+        "Nome": "Administrador",
         "Data Inclusao": "2023-11-01T17:01:01Z",
         "Data Atualizacao": "2023-11-01T17:01:01Z"
         },
         {
-        "Nome Perfil": "Consultores",
+        "Nome": "Consultores",
         "Data Inclusao": "2023-11-01T17:01:01Z",
         "Data Atualizacao": "2023-11-01T17:01:01Z"
         },
         {
-        "Nome Perfil": "Usuarios",
+        "Nome": "Usuarios",
         "Data Inclusao": "2023-11-01T17:01:01Z",
         "Data Atualizacao": "2023-11-01T17:01:01Z"
       },
       {
-        "Nome Perfil": "Desenvolvedores",
+        "Nome": "Desenvolvedores",
         "Data Inclusao": "2023-11-01T17:01:01Z",
         "Data Atualizacao": "2023-11-01T17:01:01Z"
       }

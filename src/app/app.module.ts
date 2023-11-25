@@ -94,12 +94,15 @@ import { CardModule } from 'primeng/card';
 import { BlockUIModule } from 'primeng/blockui';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { DashFeatureModule } from './pages/dashFeature/dashfeature.module';
-import { CheckboxModule } from 'primeng/checkbox'
+import { CheckboxModule } from 'primeng/checkbox';
+import { PessoaComponent } from './forms/pessoa/pessoa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    PessoaComponent,
+
 
 
   ],
