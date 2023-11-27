@@ -13,8 +13,15 @@ interface Column {
   styleUrls: ['./regra.component.scss']
 })
 export class RegraComponent {
-  regras!: any[];
+  regras: any[] = [];
+  pacotes: any[] = ["Aplicacao Completa","Modulo de Login"];
+  versoes: any[] = ["5.0.1","5.0.2"];
+  grupoDistribuicao: any[] = ["Grupo A","Grupo B"];
   visible: boolean = false;
+  regraSelecionado: any = {
+    ID: "",
+    Nome: "",
+  }
   cols!: Column[];
 
 
@@ -35,7 +42,8 @@ export class RegraComponent {
   showDialogCreate(){
     this.visible = true;
   }
-  showDialogEdit(){
+  showDialogEdit(item:any){
+    this.regraSelecionado = {...item};
     this.visible = true;
   }
   showDialogDelete(){

@@ -15,7 +15,7 @@ export class EarlybirdsService {
   getEarlysData(){
     return [
       {
-        "Nome":"Grupo A",
+        "nome":"Grupo A",
         "quantidadePessoas": 50,
         "propriedadeComparacao": "codigoCliente",
         "dataInclusao": "2023-11-01T17:01:01Z",
@@ -24,7 +24,7 @@ export class EarlybirdsService {
         {
 
         "id": "xxxx",
-        "Nome":"Grupo B",
+        "nome":"Grupo B",
         "quantidadePessoas": 50,
         "propriedadeComparacao": "codigoCliente",
         "dataInclusao": "2023-11-01T17:01:01Z",
@@ -39,15 +39,23 @@ export class EarlybirdsService {
       }
     ]
   }
-createeEarly(early: any): Observable<any>{
-  return this.httpClient.post<any>(environment.endPoint+ 'earlys', early);
-}
+  //getEarlysData(): Observable<Earlybirds[]> {
+  //  return this.httpClient.get<Earlybirds[]>(`${environment.endPoint}earlys`);
+ // }
 
-updateEarly(id : any, updatedEarly: any): Observable<any>{
-  return this.httpClient.put<any>(environment.endPoint + 'earlys/' + id, updatedEarly);
-}
+  getEarlyById(id: string): Observable<Earlybirds> {
+    return this.httpClient.get<Earlybirds>(`${environment.endPoint}api/EarlyBird/${id}`);
+  }
 
-deleteEarly(id :any): Observable<any>{
-  return this.httpClient.delete<any>(environment.endPoint + 'earlys/' + id);
-}
+  createEarly(early: Earlybirds): Observable<Earlybirds> {
+    return this.httpClient.post<Earlybirds>(`${environment.endPoint}earlys`, early);
+  }
+
+  updateEarly(id: string, updatedEarly: Earlybirds): Observable<Earlybirds> {
+    return this.httpClient.put<Earlybirds>(`${environment.endPoint}earlys/${id}`, updatedEarly);
+  }
+
+  deleteEarly(id: string): Observable<any> {
+    return this.httpClient.delete<any>(`${environment.endPoint}earlys/${id}`);
+  }
 }

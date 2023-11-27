@@ -7,8 +7,8 @@
             Gestão de Perfil
         </div>
 </div>
-<div class="my-3">
-  <button pButton type="button" (onClick)="showDialogCreate()">Adicionar</button>
+<div class="col-lg-12 my-3" style="text-align:right;">
+  <button pButton type="button" (onclick)="showDialogCreate()">Adicionar</button>
 </div>
 <div class="card">
   <p-table [columns]="cols" [value]="perfils" [tableStyle]="{ 'min-width': '50rem' }">

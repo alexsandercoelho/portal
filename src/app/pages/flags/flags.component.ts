@@ -13,6 +13,15 @@ interface Column {
 export class FlagsComponent {
   flags!: any[];
   visible: boolean = false;
+  flagSelecionado: any = {
+    ID: "",
+    Nome: "",
+    Chave: "",
+    earlyBirds: "",
+    Situação: "",
+    dataInclusao: "",
+    dataAtualizacao: ""
+  };
   cols!: Column[];
   checked: boolean = false;
 
@@ -33,7 +42,8 @@ export class FlagsComponent {
   showDialogCreate(){
     this.visible = true;
   }
-  showDialogEdit(){
+  showDialogEdit(item:any){
+    this.flagSelecionado = {...item};
     this.visible = true;
   }
   showDialogDelete(){

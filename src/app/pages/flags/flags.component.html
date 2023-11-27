@@ -8,15 +8,15 @@
               Gestão de Flags
           </div>
   </div>
-  <div class="my-3">
-    <button pButton type="button" onclick="showDialogCreate()">Adicionar</button>
+  <div class="col-lg-12 my-3" style="text-align:right;">
+    <button pButton type="button" (onclick)="showDialogCreate()">Adicionar</button>
   </div>
   <div class="card">
     <p-table [columns]="cols" [value]="flags" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="header" let-columns>
             <tr>
                 <th *ngFor="let col of columns">
-                    {{ col.header }}
+                    {{[col.header]}}
                 </th>
                 <th style="text-align: center">Ações</th>
             </tr>
@@ -28,7 +28,7 @@
             </td>
             <td>
                 <p-button
-                  (click)="showDialogEdit()"
+                  (click)="showDialogEdit(rowData)"
                   icon="pi pi-pencil"
                   styleClass="p-button-rounded p-button-secondary p-button-text"
                 ></p-button>
@@ -45,7 +45,7 @@
   </div>
 </div>
 <p-dialog
-header="Adicionar Flags"
+header="Editar"
 [(visible)]="visible"
 [breakpoints]="{ '960px': '75vw' }"
 [style]="{ width: '50vw' }"
@@ -58,9 +58,10 @@ header="Adicionar Flags"
     <input
     class="input-form"
     type="text"
-    name="Nome"
-    id="Nome"
-    placeholder="Nome"
+    name="nome"
+    id="nome"
+    [(ngModel)]="flagSelecionado.nome"
+    placeholder="nome"
     required=""
   />
   <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
@@ -71,6 +72,7 @@ header="Adicionar Flags"
     type="text"
     name="chave"
     id="chave"
+    [(ngModel)]="flagSelecionado.chave"
     placeholder="chave"
     required=""
   />
@@ -81,6 +83,7 @@ header="Adicionar Flags"
     type="text"
     name="earlybirds"
     id="earlybirds"
+    [(ngModel)]="flagSelecionado.earlybirds"
     placeholder="earlybirds"
     required=""
   />
@@ -111,6 +114,7 @@ header="Adicionar Flags"
     type="text"
     name="Data Inclusao"
     id="Data Inclusao"
+    [(ngModel)]="flagSelecionado.dataInclusao"
     placeholder="Data Inclusao"
     required=""
   />
@@ -121,6 +125,7 @@ header="Adicionar Flags"
     type="text"
     name="Data Atualizacao"
     id="Data Atualizacao"
+    [(ngModel)]="flagSelecionado.dataAtualizacao"
     placeholder="Data Atualizacao"
     required=""
   />

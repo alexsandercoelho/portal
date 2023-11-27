@@ -2,8 +2,6 @@ import { PerfilService } from './../../services/perfil.service';
 import { PessoaService } from './../../services/pessoa.service';
 import { Component } from '@angular/core';
 
-
-
 interface Column {
   field: string;
   header: string;

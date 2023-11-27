@@ -46,6 +46,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/grupo/grupo.module').then(m => m.GrupoModule),
   },
   {
+    path: 'regras',
+    loadChildren: () => import('./pages/regra/regra.module').then(m => m.RegraModule),
+},
+  {
    path: 'earlybirds',
     loadChildren: () => import('./pages/earlybirds/earlybirds.module').then(m => m.EarlybirdsModule),
   },

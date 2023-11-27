@@ -47,7 +47,9 @@ input {
   min-width: 150px;
   width: auto;
 }
-
+.my-3 {
+ left: 60%;
+}
 .container-base {
   padding: 88px 16px 0px 128px;
 
@@ -57,6 +59,7 @@ input {
     border-radius: 10px;
     min-height: 800px;
     min-width: 352px;
+
 
     .card-header {
       z-index: 3 !important;
