@@ -32,7 +32,6 @@ export class VersaoComponent {
           {field: 'Versao', header: 'Versao'},
           {field: 'versaoMinimaInstalada', header: 'Versao Minima Instalada'},
           {field: 'versaoMinimaContainer', header: 'Versao Minima Container'},
-          {field: 'destino', header: 'Destino'},
           {field: 'dataInclusao', header: 'Data Inclusao'},
           {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
@@ -50,12 +49,18 @@ export class VersaoComponent {
     alert("Salvo com Sucesso!")
   }
   saveVersaoMinInstal() {
-    console.log('Saving Versao Minima Instalada:', this.versaoSelecionado.versaoMinimaInstalada);
+    const versaoMinimaInstalada = this.versaoSelecionado.versaoMinimaInstalada;
+    console.log('Saving Versao Minima Instalada:', versaoMinimaInstalada);
+    alert("Salvo com Sucesso!");
   }
+
   saveVersaoMinCont() {
-    console.log('Saving Versao Minima Container:', this.versaoSelecionado.versaoMinimaContainer);
+    const versaoMinimaContainer = this.versaoSelecionado.versaoMinimaContainer;
+    console.log('Saving Versao Minima Container:', versaoMinimaContainer);
+    alert("Salvo com Sucesso!");
   }
   saveDestino() {
-    console.log('Saving Destino:', this.versaoSelecionado.destino);
+    const destino = this.versaoSelecionado.destino;
+    console.log('Saving Destino:', destino);
   }
 }

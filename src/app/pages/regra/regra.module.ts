@@ -1,3 +1,4 @@
+import { MultiSelectModule } from 'primeng/multiselect';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
@@ -25,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             DropdownModule,
             FormsModule,
             ReactiveFormsModule,
+            MultiSelectModule,
         ]
     }
 )

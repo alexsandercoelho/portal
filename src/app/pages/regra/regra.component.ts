@@ -15,6 +15,7 @@ interface Column {
   styleUrls: ['./regra.component.scss']
 })
 export class RegraComponent {
+  selectedGrupos: any[] = [];
   displayDialog: boolean = false;
   regras: any[] = [];
   pacotes: any[] = ["Aplicacao Completa","Modulo de Login"];
@@ -34,7 +35,6 @@ export class RegraComponent {
   ngOnInit() {
     this.regras = this.regraService.getRegrasData()
       this.cols = [
-          {field: 'ID', header: 'ID'},
           {field: 'Nome', header: 'Nome'},
           {field: 'nomePacote', header: 'Nome Pacote'},
           {field: 'Versao', header: 'Versao Pacote'},
@@ -73,14 +73,19 @@ export class RegraComponent {
     }
   }
   savenomePacote() {
-    console.log('Saving Nome:', this.regraSelecionado.nomePacote);
+    const nomePacote = this.regraSelecionado.nomePacote;
+    console.log('Saving Nome Pacote', nomePacote);
+    alert("Salvo com Sucesso!");
   }
   saveVersao() {
-    console.log('Saving Early Birds:', this.regraSelecionado.Versao);
+    const Versao = this.regraSelecionado.Versao;
+    console.log('Saving Versão', Versao);
+    alert("Salvo com Sucesso!");
   }
   saveGrupo() {
-    console.log('Saving Early Birds:', this.regraSelecionado.Grupo);
+    const Grupo = this.regraSelecionado.Grupo;
+    console.log('Saving Grupo', Grupo);
+    alert("Salvo com Sucesso!");
   }
-
 }
 

@@ -26,7 +26,6 @@ export class GrupoComponent {
   ngOnInit() {
     this.grupos = this.grupoService.getGruposData()
       this.cols = [
-          {field: 'ID', header: 'ID'},
           {field: 'Nome', header: 'Nome'},
           {field: 'quantidadePessoas', header: 'Quantidade Pessoas'},
           {field: 'versoesAssociadas', header: 'Versoes Associadas'},
@@ -66,7 +65,9 @@ export class GrupoComponent {
     }
   }
   saveComparacao(){
-    console.log('Saving Nome:', this.grupoSelecionado.propriedadeComparacao);
+    const propriedadeComparacao = this.grupoSelecionado.propriedadeComparacao;
+    console.log('Saving Propriedade Comparação', propriedadeComparacao);
+    alert("Salvo com Sucesso!");
   }
   save(){
     alert("Salvo com Sucesso!")

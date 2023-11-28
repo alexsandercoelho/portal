@@ -75,8 +75,11 @@ export class PerfilComponent {
     this.visible = false;
   }
   saveFuncionalidades() {
-    console.log('Funcionalidades selecionadas:', this.selectedFuncionalidades);
+    const selectedFuncionalidades = this.perfilSelecionado.selectedFuncionalidades;
+    console.log('Saving Funcionalidades', selectedFuncionalidades);
+    alert("Salvo com Sucesso!");
   }
+
 
 
 }
