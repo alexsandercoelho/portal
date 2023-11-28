@@ -14,6 +14,7 @@ interface Column {
 export class FlagsComponent {
   checkboxTrueChecked: boolean = false;
   checkboxFalseChecked: boolean = false;
+  selectedEarlys: any[] = [];
   flagSelecionado: any = {
     ID: "",
     Nome: "",
@@ -113,6 +114,9 @@ export class FlagsComponent {
   updateCheckboxStates() {
     this.checkboxFalseChecked = !this.checkboxTrueChecked;
     this.checkboxTrueChecked = !this.checkboxFalseChecked;
+  }
+  saveEarlys() {
+    console.log('Earlys selecionadas:', this.selectedEarlys);
   }
 
 }

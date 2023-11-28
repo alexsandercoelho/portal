@@ -21,6 +21,7 @@ export class EarlybirdsComponent {
  };
   cols!: Column[];
   earlys!: any[];
+  displayDialog: boolean = false;
 
   constructor(
     private earlybirdsService: EarlybirdsService
@@ -36,16 +37,32 @@ export class EarlybirdsComponent {
           {field: 'dataAtualizacao', header: 'dataAtualizacao'}
       ];
   }
-  showDialogCreate(){
-    this.visible = false;
+  showDialogCreate() {
+    this.earlySelecionado = {
+      nome: '',
+      dataInclusao: '2023-11-01T17:01:01Z',
+      dataAtualizacao: '2023-11-01T17:01:01Z'
+    };
+    this.displayDialog = true;
+  }
+  createEarly() {
+    const newEarly = { ...this.earlySelecionado };
+    this.earlys.push(newEarly);
+    console.log('Novo Early criada:', newEarly);
+    this.displayDialog = false;
   }
   showDialogEdit(item:any){
     this.earlySelecionado = {...item};
     this.visible = true;
   }
-  showDialogDelete(){
-    this.visible = false;
-    alert("Excluído com Sucesso!")
+  deleteEarly(early: any) {
+    const index = this.earlys.indexOf(early);
+    if (index !== -1) {
+      this.earlys.splice(index, 1);
+      console.log('Early excluído com sucesso');
+    } else {
+      console.log('Falha ao excluir o Early');
+    }
   }
   save(){
     alert("Salvo com Sucesso!")
