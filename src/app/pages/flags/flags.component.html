@@ -3,94 +3,183 @@
 <div class="container-base">
 
   <div class="content-page">
-      <div class="card-header">
-          <div class="card-title">
-              Gestão de Flags
-          </div>
-  </div>
-  <div class="col-lg-12 my-3" style="text-align:right;">
-    <button pButton type="button" (onclick)="showDialogCreate()">Adicionar</button>
-  </div>
-  <div class="card">
-    <p-table [columns]="cols" [value]="flags" [tableStyle]="{'min-width': '50rem'}">
-        <ng-template pTemplate="header" let-columns>
-            <tr>
-                <th *ngFor="let col of columns">
-                    {{[col.header]}}
-                </th>
-                <th style="text-align: center">Ações</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-rowData let-columns="columns">
-          <tr>
-            <td *ngFor="let col of columns">
-                {{ rowData[col.field] }}
-            </td>
-            <td>
-                <p-button
-                  (click)="showDialogEdit(rowData)"
-                  icon="pi pi-pencil"
-                  styleClass="p-button-rounded p-button-secondary p-button-text"
-                ></p-button>
-                <p-button
-                  icon="pi pi-trash"
-                  styleClass="p-button-danger p-button-text"
-                   (click)="deleteFlag(rowData)"
-                  >
-                </p-button>
-            </td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </div>
-  </div>
+    <div class="card-header">
+        <div class="card-title">
+            Gestao de Flags
+        </div>
+</div>
+<div class="col-lg-12 my-3" style="text-align:right;">
+  <button pButton type="button" (click)="showDialogCreate()">Adicionar</button>
 </div>
 <p-dialog
-header="Editar"
-[(visible)]="visible"
+header="Adicionar"
+[(visible)]="displayDialog"
 [breakpoints]="{ '960px': '75vw' }"
-[style]="{ width: '50vw' }"
 [draggable]="false"
 [resizable]="false"
 >
 <div class="container-form">
-<div class="group-input">
-    <div class="text-info">Nome</div>
+  <div class="group-input">
+     <div class="text-info">Nome da Flag</div>
+        <input
+          class="input-form"
+          type="text"
+          name=""
+          id="nome"
+          [(ngModel)]="flagSelecionado.Nome"
+          placeholder="Nome"
+          required=""
+        />
+        <div class="text-info">Propriedade Comparação</div>
+         <input
+          class="input-form"
+          type="text"
+          name="chave"
+          id="chave"
+          [(ngModel)]="flagSelecionado.chave"
+          placeholder="Propriedade"
+          required=""
+          disabled="True"
+        />
+        <div class="text-info">Early Birds</div>
+        <p-multiSelect [options]="gruposEarly" class="input-form" placeholder="Selecione o Grupo" [(ngModel)]="selectedEarly">
+        </p-multiSelect>
+      <div class="text-info">Situação</div>
+  <div class="checkbox">
+    <label for="checkboxTrue">
+      <input
+        class="p-checkbox mr-2"
+        type="checkbox"
+        id="checkboxTrue"
+        [(ngModel)]="checkboxTrueChecked"
+        name="checkboxTrue"
+        [disabled]="checkboxFalseChecked"
+        (change)="updateCheckboxStates()"
+      />True
+    </label>
+    <label for="checkboxFalse">
+      <input
+        class="p-checkbox mr-2"
+        type="checkbox"
+        id="checkboxFalse"
+        [(ngModel)]="checkboxFalseChecked"
+        name="checkboxFalse"
+        [disabled]="checkboxTrueChecked"
+        (change)="updateCheckboxStates()"
+      />False
+    </label>
+    </div>
+    <div class="text-info">Data Inclusao</div>
     <input
     class="input-form"
     type="text"
-    name="nome"
-    id="nome"
-    [(ngModel)]="flagSelecionado.nome"
-    placeholder="nome"
-    required=""
-  />
-  <p-button icon="pi pi-save" (click)="saveNome()" styleClass="p-button-rounded p-button-text"></p-button>
-
-  <div class="text-info">Chave</div>
+    name="Data Inclusao"
+    id="Data Inclusao"
+    [(ngModel)]="flagSelecionado.dataInclusao"
+    placeholder="Data Inclusao"
+    disabled="True"
+    />
+    <div class="text-info">Data Atualizacao</div>
     <input
     class="input-form"
     type="text"
-    name="chave"
-    id="chave"
-    [(ngModel)]="flagSelecionado.chave"
-    placeholder="chave"
-    required=""
-  />
+    name="Data Atualizacao"
+    id="Data Atualizacao"
+    [(ngModel)]="flagSelecionado.dataAtualizacao"
+    placeholder="Data Atualizacao"
+    disabled="True"
+      />
+   </div>
+  </div>
+<p-footer>
+  <button pButton type="button" label="Cancelar" (click)="displayDialog = false"></button>
+  <button pButton type="button" label="Salvar" (click)="createFlag()" class="p-button-primary"></button>
+</p-footer>
+</p-dialog>
+<div class="card">
+  <p-table
+  [columns]="cols"
+  [value]="flags"
+  styleClass="p-datatable-striped"
+  [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+              <th *ngFor="let col of columns">
+                  {{ col.header }}
+              </th>
+              <th style="text-align: center">Ações</th>
+          </tr>
+      </ng-template>
+        <p-table [columns]="cols" [value]="flags" [tableStyle]="{'min-width': '50rem'}"></p-table>
+          <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr>
+              <td *ngFor="let col of columns">
+                  {{ rowData[col.field] }}
+              </td>
+              <td>
+                  <p-button
+                  (click)="showDialogEdit(rowData)"
+                  icon="pi pi-pencil"
+                  styleClass="p-button-rounded p-button-secondary p-button-text"
+                  ></p-button>
 
-  <div class="text-info">Early Birds</div>
-    <input
-    class="input-form"
-    type="text"
-    name="earlybirds"
-    id="earlybirds"
-    [(ngModel)]="flagSelecionado.earlybirds"
-    placeholder="earlybirds"
-    required=""
-  />
-  <p-button icon="pi pi-save" (click)="saveEarlyBirds()" styleClass="p-button-rounded p-button-text"></p-button>
+                  <p-button
+                    (onClick)="deleteFlag(rowData)"
+                    icon="pi pi-trash"
+                    styleClass="p-button-danger p-button-text"
+                  ></p-button>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  <p-dialog
+    header="Editar"
+    [(visible)]="visible"
+    [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '50vw' }"
+    [draggable]="false"
+    [resizable]="false"
+  >
+    <div class="container-form">
+      <div class="group-input">
+        <div class="text-info">Nome</div>
+        <input
+          class="input-form"
+          type="text"
+          name="NomeGrupo"
+          id="Nome"
+          [(ngModel)]="flagSelecionado.Nome"
+          placeholder="Nome"
+          required=""
+        />
+        <p-button icon="pi pi-save" (click)="saveNome()" styleClass="p-button-rounded p-button-text"></p-button>
 
-  <div class="text-info">Situação</div>
+        <div class="text-info">Propriedade Comparação</div>
+         <input
+          class="input-form"
+          type="text"
+          name="chave"
+          id="chave"
+          [(ngModel)]="flagSelecionado.chave"
+          placeholder="Propriedade"
+          required=""
+          disabled="True"
+        />
+        <div class="text-info">Early Birds</div>
+        <input
+        class="input-form"
+        type="text"
+        name="earlybirds"
+        id="earlybirds"
+        [(ngModel)]="flagSelecionado.earlybirds"
+        placeholder="earlybirds"
+        required=""
+        />
+        <p-button icon="pi pi-save" (click)="saveEarlyBirds()" styleClass="p-button-rounded p-button-text"></p-button>
+      </div>
+      <div class="text-info">Situação</div>
   <div class="checkbox">
     <label for="checkboxTrue">
       <input
@@ -115,9 +204,8 @@ header="Editar"
       />False
     </label>
     <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
-  </div>
-  </div>
-<div class="text-info">Data Inclusao</div>
+    </div>
+    <div class="text-info">Data Inclusao</div>
     <input
     class="input-form"
     type="text"
@@ -125,10 +213,9 @@ header="Editar"
     id="Data Inclusao"
     [(ngModel)]="flagSelecionado.dataInclusao"
     placeholder="Data Inclusao"
-    required=""
-  />
-
-  <div class="text-info">Data Atualizacao</div>
+    disabled="True"
+    />
+    <div class="text-info">Data Atualizacao</div>
     <input
     class="input-form"
     type="text"
@@ -136,12 +223,7 @@ header="Editar"
     id="Data Atualizacao"
     [(ngModel)]="flagSelecionado.dataAtualizacao"
     placeholder="Data Atualizacao"
-    required=""
-  />
-
+    disabled="True"
+    />
 </div>
-</p-dialog>
-
-
-
-
+  </p-dialog>

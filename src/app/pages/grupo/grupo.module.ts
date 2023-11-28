@@ -11,6 +11,7 @@ import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { PrimeIcons } from 'primeng/api';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule(
     {
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
             DropdownModule,
             FormsModule,
             ReactiveFormsModule,
+            MultiSelectModule
         ]
     }
 )

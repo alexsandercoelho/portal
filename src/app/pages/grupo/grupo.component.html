@@ -92,7 +92,7 @@ header="Adicionar"
     header="Editar"
     [(visible)]="visible"
     [breakpoints]="{ '960px': '75vw' }"
-    [style]="{ width: '50vw' }"
+    [style]="{ width: '50vw',height: '85vh'  }"
     [draggable]="false"
     [resizable]="false"
   >
@@ -119,6 +119,19 @@ header="Adicionar"
           placeholder="Propriedade"
           required=""
         />
+        <div class="text-info">Valores Associados</div>
+            <p-multiSelect [options]="valores" class="input-form"[(ngModel)]="selectedValores">
+            </p-multiSelect>
+          <div class="values-list">
+          <div *ngFor="let valor of selectedValores"
+          ><button pButton type="button" class="my-2"(click)="removerValor(valor)">Remover</button>
+          </div>
+        </div>
+
+        <input class="input-form my-2" type="text" [(ngModel)]="novoValor" placeholder="Adicionar novo valor"/>
+        <div>
+          <button pButton type="button"(click)="adicionarValor()">Adicionar</button>
+        </div>
        </div>
     </div>
     <p-footer>

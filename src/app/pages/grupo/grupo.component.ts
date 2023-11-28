@@ -16,6 +16,9 @@ export class GrupoComponent {
   grupos!: any[];
   cols!: Column[];
   visible: boolean = false;
+  selectedValores: string[] = [];
+  valores: string[] =  ["valorA","valorB","valorC","valorD"];
+  novoValor: string = '';
   grupoSelecionado: any = {
     Nome: "",
     propriedadeComparacao: "",
@@ -69,6 +72,16 @@ export class GrupoComponent {
     console.log('Saving Propriedade Comparação', propriedadeComparacao);
     alert("Salvo com Sucesso!");
   }
+  adicionarValor() {
+    if (this.novoValor && !this.selectedValores.includes(this.novoValor)) {
+      this.selectedValores = [...this.selectedValores, this.novoValor];
+      this.novoValor = ''; // Limpar o campo de entrada depois de adicionar
+    }
+  }
+  removerValor(valor: string) {
+    this.selectedValores = this.selectedValores.filter(item => item !== valor);
+  }
+
   save(){
     alert("Salvo com Sucesso!")
    }

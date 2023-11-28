@@ -19,6 +19,11 @@ export class mudancaComponent {
   displayDialogexcluir: boolean = false;
   items!: MenuItem[];
   messageService: any;
+  campoSalvo: string = '';
+  mudancaSelecionado: any = {
+    ID: "",
+    Nome: "",
+  }
 
   constructor(private mudancaService: MudancaService)
     {
@@ -27,11 +32,10 @@ export class mudancaComponent {
   ngOnInit() {
     this.mudancas = this.mudancaService.getMudancasData()
       this.cols = [
-          {field: 'id', header: 'ID'},
           {field: 'nomeFlag', header: 'Nome'},
-          {field: 'atributoAlterado', header: 'Versao'},
-          {field: 'situacaoAtual', header: 'Versao Minima Instalada'},
-          {field: 'situacaoAnterior', header: 'Versao Minima Container'},
+          {field: 'atributoAlterado', header: 'Atributo Alterado'},
+          {field: 'situacaoAtual', header: 'Situação Atual'},
+          {field: 'situacaoAnterior', header: 'Situação Anterior'},
           {field: 'dataInclusao', header: 'Data Inclusao'},
           {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
@@ -43,11 +47,6 @@ export class mudancaComponent {
 
   showDialogEdit(){
     this.visible = true;
-  }
-  showDialogDelete(){
-    this.visible = true;
-    alert("Excluído com Sucesso!")
-    this.visible = false;
   }
   save(){
     alert("Salvo com Sucesso!")
@@ -63,6 +62,11 @@ export class mudancaComponent {
   }
   closeDialogexcluir() {
     this.displayDialogexcluir = false;
-  }
+    this.mostrarCampoSalvo();
 }
+mostrarCampoSalvo() {
+  this.campoSalvo = this.mudancaSelecionado.campoQueFoiSalvo; // Substitua pelo campo que foi salvo
+}
+}
+
 

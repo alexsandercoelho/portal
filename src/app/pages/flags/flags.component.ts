@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { disableDebugTools } from '@angular/platform-browser';
 import { FlagsService } from 'src/app/services/flags.service';
 
 interface Column {
@@ -13,12 +12,11 @@ interface Column {
 })
 export class FlagsComponent {
   checkboxTrueChecked: boolean = false;
+  selectedEarly: any[] = [];
   checkboxFalseChecked: boolean = false;
   selectedEarlys: any[] = [];
   flagSelecionado: any = {
-    ID: "",
     Nome: "",
-    Chave: "",
     earlyBirds: "",
     Situação: "",
     dataInclusao: new Date().toISOString(),
@@ -28,19 +26,17 @@ export class FlagsComponent {
   visible: boolean = false;
   cols!: Column[];
   displayDialog: boolean = false;
-
-
+  gruposEarly: any[] = ["Grupo A","Grupo B","Grupo C" ];
 
   constructor(private flagsService: FlagsService) {}
 
   ngOnInit() {
     this.flags = this.flagsService.getFlagsData()
       this.cols = [
-          {field: 'id', header: 'ID'},
           {field: 'nome', header: 'Nome'},
           {field: 'chave', header: 'Chave'},
-          {field: 'earlyBirds', header: 'Earlys Birds'},
           {field: 'situacao', header: 'Situação'},
+          {field: 'earlyBirds', header: 'Earlys Birds'},
           {field: 'dataInclusao', header: 'Data Inclusao'},
           {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
@@ -84,10 +80,15 @@ export class FlagsComponent {
 
 
   saveNome() {
+    const nome = this.flagSelecionado.nome;
+    console.log('Saving Nome:', nome);
+    alert("Salvo com Sucesso!");
     console.log('Saving Nome:', this.flagSelecionado.nome);
   }
   saveEarlyBirds() {
-    console.log('Saving Early Birds:', this.flagSelecionado.earlybirds);
+    const earlybirds = this.flagSelecionado.earlybirds;
+    console.log('Saving Early Birds:', earlybirds);
+    alert("Salvo com Sucesso!");
   }
 
   save() {
