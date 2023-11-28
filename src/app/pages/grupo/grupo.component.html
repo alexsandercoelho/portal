@@ -119,7 +119,10 @@ header="Adicionar"
           placeholder="Propriedade"
           required=""
         />
-        <p-button icon="pi pi-save" (click)="saveComparacao()" styleClass="p-button-rounded p-button-text"></p-button>
-      </div>
+       </div>
     </div>
+    <p-footer>
+      <button pButton type="button" label="Cancelar" (click)="displayDialog = false"></button>
+      <button pButton type="button" label="Salvar" (click)="saveComparacao()" class="p-button-primary"></button>
+    </p-footer>
   </p-dialog>

@@ -15,27 +15,27 @@ export class RegraService {
         {
               "ID": 40,
               "Nome": "Regra A",
-              "Nome Pacote":"Aplicacao Completa",
-              "Versao Pacote": "5.0.0",
-              "Grupos Distribuicao":"Grupo A, Grupo B",
+              "nomePacote":"Aplicacao Completa",
+              "Versao": "5.0.0",
+              "Grupo":"Grupo A, Grupo B",
               "Data Inclusao": "2023-11-01T17:01:01Z",
               "Data Atualizacao": "2023-11-01T17:01:01Z"
               },
               {
               "ID": 41,
               "Nome": "Regra B",
-              "Nome Pacote":"Aplicacao Completa",
-              "Versao Pacote": "5.0.0",
-              "Grupos Distribuicao": "Grupo A, Grupo B, Grupo C",
+              "nomePacote":"Aplicacao Completa",
+              "Versao": "5.0.0",
+              "Grupo": "Grupo A, Grupo B, Grupo C",
               "Data Inclusao": "2023-11-01T17:01:01Z",
               "Data Atualizacao": "2023-11-01T17:01:01Z"
               },
               {
               "ID": 42,
               "Nome": "Regra C",
-              "Nome Pacote":"Modulo de Login",
-              "Versa oPacote": "5.0.0",
-              "Grupos Distribuicao":"Grupo A, Grupo B, Grupo C",
+              "nomePacote":"Modulo de Login",
+              "Versao": "5.0.0",
+              "Grupo":"Grupo A, Grupo B, Grupo C",
               "Data Inclusao": "2023-11-01T17:01:01Z",
               "Data Atualizacao": "2023-11-01T17:01:01Z"
             }

@@ -20,6 +20,7 @@ export class PerfilComponent {
   cols!: Column[];
   funcao!: any[];
   displayDialog: boolean = false;
+  selectedFuncionalidades: any[] = [];
 
   constructor(
     private perfilService: PerfilService,
@@ -61,13 +62,20 @@ export class PerfilComponent {
     this.perfilSelecionado = {...rowData};
     this.visible = true;
   }
-  showDialogDelete(){
-    this.visible = false;
-    console.log(this.perfils)
-    alert("Excluído com Sucesso!")
+  deletePerfil(perfil: any) {
+    const index = this.perfils.indexOf(perfil);
+    if (index !== -1) {
+      this.perfils.splice(index, 1);
+      console.log('Perfil excluído com sucesso');
+    } else {
+      console.log('Falha ao excluir o Perfil');
+    }
   }
   save(){
     this.visible = false;
+  }
+  saveFuncionalidades() {
+    console.log('Funcionalidades selecionadas:', this.selectedFuncionalidades);
   }
 
 

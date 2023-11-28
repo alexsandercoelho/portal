@@ -62,7 +62,7 @@ header="Editar Versões"
     id="ID"
     [(ngModel)]="versaoSelecionado.ID"
     placeholder="Nome"
-    required=""
+    disabled="True"
   />
 
   <div class="text-info">Nome</div>
@@ -73,7 +73,7 @@ header="Editar Versões"
     id="Nome"
     [(ngModel)]="versaoSelecionado.Nome"
     placeholder="Nome"
-    required=""
+    disabled="True"
   />
 
   <div class="text-info">Versão</div>
@@ -84,7 +84,7 @@ header="Editar Versões"
     id="Versao"
     placeholder="Versao"
     [(ngModel)]="versaoSelecionado.Versao"
-    required=""
+    disabled="True"
   />
 
   <div class="text-info">Versao Minima Instalada</div>
@@ -119,7 +119,7 @@ header="Editar Versões"
     id="Data Inclusao"
     [(ngModel)]="versaoSelecionado.dataInclusao"
     placeholder="Data Inclusao"
-    required=""
+    disabled="True"
   />
 
   <div class="text-info">Data Atualizacao</div>
@@ -130,7 +130,7 @@ header="Editar Versões"
     id="Data Atualizacao"
     placeholder="Data Atualizacao"
     [(ngModel)]="versaoSelecionado.dataAtualizacao"
-    required=""
+    disabled="True"
   />
   <div class="text-info">Destino Instalacao</div>
   <input
