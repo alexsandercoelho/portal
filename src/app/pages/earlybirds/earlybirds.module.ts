@@ -11,7 +11,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { DashFeatureModule } from '../dashFeature/dashfeature.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MultiSelectModule } from 'primeng/multiselect';
 @NgModule(
     {
         providers: [],
@@ -28,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             DropdownModule,
             FormsModule,
             ReactiveFormsModule,
+            MultiSelectModule,
         ]
     }
 )

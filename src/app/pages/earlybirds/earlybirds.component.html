@@ -90,14 +90,13 @@ header="Novo"
     header="Editar"
     [(visible)]="visible"
     [breakpoints]="{ '960px': '75vw' }"
-    [style]="{ width: '50vw', height: '50vh' }"
+    [style]="{ width: '50vw', height: '85vh' }"
     [draggable]="false"
     [resizable]="false"
   >
     <div class="container-form">
     <div class="group-input">
-
-        <div class="text-info">Nome</div>
+          <div class="text-info">Nome</div>
           <input
             class="input-form"
             type="text"
@@ -105,7 +104,7 @@ header="Novo"
             id="nome"
             [(ngModel)]="earlySelecionado.nome"
             placeholder="nome"
-            required=""
+            disabled="True"
           />
           <div class="text-info">Quantidade Pessoas</div>
           <input
@@ -115,7 +114,7 @@ header="Novo"
             id="quantidadePessoas"
             [(ngModel)]="earlySelecionado.quantidadePessoas"
             placeholder="quantidadePessoas"
-            required=""
+            disabled="True"
           />
           <div class="text-info">Propriedade Comparação</div>
           <input
@@ -125,7 +124,7 @@ header="Novo"
             id="propriedadeComparacao"
             [(ngModel)]="earlySelecionado.propriedadeComparacao"
             placeholder="propriedadeComparacao"
-            required=""
+            disabled="True"
           />
 
           <div class="text-info">Data Atualização</div>
@@ -136,7 +135,7 @@ header="Novo"
             id="dataAtualizacao"
             [(ngModel)]="earlySelecionado.dataAtualizacao"
             placeholder="dataAtualizacao"
-            required=""
+            disabled="True"
           />
         <div class="text-info">Data Inclusão</div>
           <input
@@ -146,8 +145,22 @@ header="Novo"
             id="dataInclusao"
             [(ngModel)]="earlySelecionado.dataInclusao"
             placeholder="dataInclusao"
-            required=""
+            disabled="True"
           />
+          <div class="text-info">Valores Associados</div>
+            <p-multiSelect [options]="valores" class="input-form"[(ngModel)]="selectedValores">
+            </p-multiSelect>
+          <div class="values-list">
+          <div *ngFor="let valor of selectedValores"
+          ><button pButton type="button" class="my-2"(click)="removerValor(valor)">Remover</button>
+          </div>
         </div>
-    </div>
+
+        <input class="input-form my-2" type="text" [(ngModel)]="novoValor" placeholder="Adicionar novo valor"/>
+        <div>
+          <button pButton type="button"(click)="adicionarValor()">Adicionar</button>
+        </div>
+
+        </div>
+        </div>
   </p-dialog>

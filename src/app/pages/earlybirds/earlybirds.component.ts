@@ -1,3 +1,4 @@
+import { ValoresService } from './../../services/valores.service';
 import { Component } from '@angular/core';
 import { EarlybirdsService } from 'src/app/services/earlybirds.service';
 
@@ -22,13 +23,19 @@ export class EarlybirdsComponent {
   cols!: Column[];
   earlys!: any[];
   displayDialog: boolean = false;
+  selectedValores: string[] = [];
+  valores: string[] =  ["valorA","valorB","valorC","valorD"];
+  novoValor: string = '';
 
   constructor(
-    private earlybirdsService: EarlybirdsService
+    private earlybirdsService: EarlybirdsService,
+    private valoresService: ValoresService
     ) {}
 
   ngOnInit() {
-    this.earlys = this.earlybirdsService.getEarlysData()
+    this.earlys = this.earlybirdsService.getEarlysData();
+
+
       this.cols = [
           {field: 'nome', header: 'Nome Grupo'},
           {field: 'quantidadePessoas', header: 'Quantidade Pessoas'},
@@ -36,6 +43,7 @@ export class EarlybirdsComponent {
           {field: 'dataInclusao', header: 'Data Inclusao'},
           {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
+
   }
   showDialogCreate() {
     this.earlySelecionado = {
@@ -65,6 +73,16 @@ export class EarlybirdsComponent {
       console.log('Falha ao excluir o Early');
     }
   }
+  adicionarValor() {
+    if (this.novoValor && !this.selectedValores.includes(this.novoValor)) {
+      this.selectedValores = [...this.selectedValores, this.novoValor];
+      this.novoValor = ''; // Limpar o campo de entrada depois de adicionar
+    }
+  }
+  removerValor(valor: string) {
+    this.selectedValores = this.selectedValores.filter(item => item !== valor);
+  }
+
   save(){
     alert("Salvo com Sucesso!")
   }
