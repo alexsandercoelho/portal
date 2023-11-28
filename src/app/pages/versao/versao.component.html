@@ -97,7 +97,7 @@ header="Editar Versões"
     placeholder="Versao Minima Instalada"
     required=""
   />
-  <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
+  <p-button icon="pi pi-save" (click)="saveVersaoMinInstal()" styleClass="p-button-rounded p-button-text"></p-button>
 
   <div class="text-info">Versao Minima Container</div>
     <input
@@ -109,7 +109,7 @@ header="Editar Versões"
     placeholder="Versao Minima Container"
     required=""
     />
-    <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
+    <p-button icon="pi pi-save" (click)="saveVersaoMinCont()" styleClass="p-button-rounded p-button-text"></p-button>
 
   <div class="text-info">Data Inclusao</div>
     <input
@@ -142,7 +142,7 @@ header="Editar Versões"
   [(ngModel)]="versaoSelecionado.destino"
   required=""
 />
-<p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
+<p-button icon="pi pi-save" (click)="saveDestino()" styleClass="p-button-rounded p-button-text"></p-button>
 
 </div>
 

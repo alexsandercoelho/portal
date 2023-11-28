@@ -32,6 +32,7 @@ export class VersaoComponent {
           {field: 'Versao', header: 'Versao'},
           {field: 'versaoMinimaInstalada', header: 'Versao Minima Instalada'},
           {field: 'versaoMinimaContainer', header: 'Versao Minima Container'},
+          {field: 'destino', header: 'Destino'},
           {field: 'dataInclusao', header: 'Data Inclusao'},
           {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
@@ -48,5 +49,13 @@ export class VersaoComponent {
   save(){
     alert("Salvo com Sucesso!")
   }
-
+  saveVersaoMinInstal() {
+    console.log('Saving Versao Minima Instalada:', this.versaoSelecionado.versaoMinimaInstalada);
+  }
+  saveVersaoMinCont() {
+    console.log('Saving Versao Minima Container:', this.versaoSelecionado.versaoMinimaContainer);
+  }
+  saveDestino() {
+    console.log('Saving Destino:', this.versaoSelecionado.destino);
+  }
 }
