@@ -17,8 +17,8 @@ export class VersaoComponent {
     ID: "",
     Nome: "",
     Versao: "",
-    VersaoMinimaInstalada: "",
-    VersaoMinimaContainer: "",
+    dataInclusao: new Date().toISOString(),
+    dataAtualizacao: new Date().toISOString(),
   };
   cols!: Column[];
 

@@ -39,16 +39,16 @@ export class RegraComponent {
           {field: 'nomePacote', header: 'Nome Pacote'},
           {field: 'Versao', header: 'Versao Pacote'},
           {field: 'Grupo', header: 'Grupos Distribuicao'},
-          {field: 'Data Inclusao', header: 'Data Inclusao'},
-          {field: 'Data Atualizacao', header: 'Data Atualizacao'}
+          {field: 'dataInclusao', header: 'Data Inclusao'},
+          {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
   }
   showDialogCreate() {
     this.regraSelecionado = {
       ID: this.nextID.toString(),
       nome: 'Teste',
-      dataInclusao: '2023-11-01T17:01:01Z',
-      dataAtualizacao: '2023-11-01T17:01:01Z'
+      dataInclusao: new Date().toISOString(),
+      dataAtualizacao: new Date().toISOString(),
     };
     this.nextID++;
     this.displayDialog = true;

@@ -21,8 +21,8 @@ export class FlagsComponent {
     Chave: "",
     earlyBirds: "",
     Situação: "",
-    dataInclusao: "",
-    dataAtualizacao: ""
+    dataInclusao: new Date().toISOString(),
+    dataAtualizacao: new Date().toISOString(),
   };
   flags: any[] = [];
   visible: boolean = false;

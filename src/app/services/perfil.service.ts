@@ -14,23 +14,23 @@ export class PerfilService {
     getPerfilsData(){
       return [{
         "Nome": "Administrador",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z"
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z"
         },
         {
         "Nome": "Consultores",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z"
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z"
         },
         {
         "Nome": "Usuarios",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z"
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z"
       },
       {
         "Nome": "Desenvolvedores",
-        "Data Inclusao": "2023-11-01T17:01:01Z",
-        "Data Atualizacao": "2023-11-01T17:01:01Z"
+        "dataInclusao": "2023-11-01T17:01:01Z",
+        "dataAtualizacao": "2023-11-01T17:01:01Z"
       }
     ]
   }

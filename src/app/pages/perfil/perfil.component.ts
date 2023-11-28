@@ -14,7 +14,10 @@ interface Column {
 export class PerfilComponent {
   visible: boolean = false;
   perfilSelecionado: any = {
-    Nome: ""
+    Nome: "",
+    dataInclusao: new Date().toISOString(),
+    dataAtualizacao: new Date().toISOString(),
+
   };
   perfils: any[] = [];
   cols!: Column[];
@@ -37,8 +40,8 @@ export class PerfilComponent {
 
       this.cols = [
           {field: 'Nome', header: 'Nome'},
-          {field: 'Data Inclusao', header: 'Data Inclusao'},
-          {field: 'Data Atualizacao', header: 'Data Atualizacao'}
+          {field: 'dataInclusao', header: 'Data Inclusao'},
+          {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
   }
   showDialogCreate() {

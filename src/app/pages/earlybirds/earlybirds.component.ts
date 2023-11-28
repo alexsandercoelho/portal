@@ -16,8 +16,8 @@ export class EarlybirdsComponent {
     Nome: "",
     quantidadePessoas: "",
     propriedadeComparacao: "",
-    dataInclusao: "",
-    dataAtualizacao: ""
+    dataInclusao: new Date().toISOString(),
+    dataAtualizacao: new Date().toISOString(),
  };
   cols!: Column[];
   earlys!: any[];
@@ -30,16 +30,17 @@ export class EarlybirdsComponent {
   ngOnInit() {
     this.earlys = this.earlybirdsService.getEarlysData()
       this.cols = [
-          {field: 'Nome', header: 'Nome'},
-          {field: 'quantidadePessoas', header: 'quantidadePessoas'},
-          {field: 'propriedadeComparacao', header: 'propriedadeComparacao'},
-          {field: 'dataInclusao', header: 'dataInclusao'},
-          {field: 'dataAtualizacao', header: 'dataAtualizacao'}
+          {field: 'nome', header: 'Nome Grupo'},
+          {field: 'quantidadePessoas', header: 'Quantidade Pessoas'},
+          {field: 'propriedadeComparacao', header: 'Propriedade Comparacao'},
+          {field: 'dataInclusao', header: 'Data Inclusao'},
+          {field: 'dataAtualizacao', header: 'Data Atualizacao'}
       ];
   }
   showDialogCreate() {
     this.earlySelecionado = {
       nome: '',
+      propriedadeComparacao: '',
       dataInclusao: '2023-11-01T17:01:01Z',
       dataAtualizacao: '2023-11-01T17:01:01Z'
     };

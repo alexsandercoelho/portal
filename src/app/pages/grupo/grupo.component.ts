@@ -38,8 +38,8 @@ export class GrupoComponent {
     this.grupoSelecionado = {
       ID: this.nextID.toString(),
       nome: 'Teste',
-      dataInclusao: '2023-11-01T17:01:01Z',
-      dataAtualizacao: '2023-11-01T17:01:01Z'
+      dataInclusao: new Date().toISOString(),
+      dataAtualizacao: new Date().toISOString(),
     };
     this.nextID++;
     this.displayDialog = true;

@@ -18,8 +18,8 @@ export class RegraService {
               "nomePacote":"Aplicacao Completa",
               "Versao": "5.0.0",
               "Grupo":"Grupo A, Grupo B",
-              "Data Inclusao": "2023-11-01T17:01:01Z",
-              "Data Atualizacao": "2023-11-01T17:01:01Z"
+              "dataInclusao": "2023-11-01T17:01:01Z",
+              "dataAtualizacao": "2023-11-01T17:01:01Z"
               },
               {
               "ID": 41,
@@ -27,8 +27,8 @@ export class RegraService {
               "nomePacote":"Aplicacao Completa",
               "Versao": "5.0.0",
               "Grupo": "Grupo A, Grupo B, Grupo C",
-              "Data Inclusao": "2023-11-01T17:01:01Z",
-              "Data Atualizacao": "2023-11-01T17:01:01Z"
+              "dataInclusao": "2023-11-01T17:01:01Z",
+              "dataAtualizacao": "2023-11-01T17:01:01Z"
               },
               {
               "ID": 42,
@@ -36,8 +36,8 @@ export class RegraService {
               "nomePacote":"Modulo de Login",
               "Versao": "5.0.0",
               "Grupo":"Grupo A, Grupo B, Grupo C",
-              "Data Inclusao": "2023-11-01T17:01:01Z",
-              "Data Atualizacao": "2023-11-01T17:01:01Z"
+              "dataInclusao": "2023-11-01T17:01:01Z",
+              "dataAtualizacao": "2023-11-01T17:01:01Z"
             }
         ]
       }
