@@ -20,6 +20,7 @@ export class PessoaComponent {
   pessoas!: any[];
   perfils!: any[];
   cols!: Column[];
+  displayDialog: boolean = false;
 
   constructor(
     private pessoaService: PessoaService,
@@ -40,14 +41,38 @@ export class PessoaComponent {
           {field: 'Data Atualizacao', header: 'Data Atualizacao'}
       ];
   }
-  showDialogCreate(){
-    this.visible = true;
+  showDialogCreate() {
+    this.pessoaSelecionado = {
+      nome: 'Teste',
+      dataInclusao: '2023-11-01T17:01:01Z',
+      dataAtualizacao: '2023-11-01T17:01:01Z'
+    };
+    this.displayDialog = true;
   }
+  createPessoa() {
+    const newPessoa = { ...this.pessoaSelecionado };
+    this.pessoas.push(newPessoa);
+    console.log('Nova Pessoa criada:', newPessoa);
+    this.displayDialog = false;
+    }
+
+
+
   showDialogEdit(item:any){
     this.pessoaSelecionado = {...item};
     this.visible = true;
   }
 
+  deletePessoa(pessoa: any) {
+    // Lógica para exclusão de uma flag específica
+    const index = this.pessoas.indexOf(pessoa);
+    if (index !== -1) {
+      this.pessoas.splice(index, 1);
+      console.log('Pessoa excluída com sucesso');
+    } else {
+      console.log('Falha ao excluir a Pessoa');
+    }
+  }
   showDialogDelete(){
     this.visible = false;
     alert("Excluído com Sucesso!")

@@ -9,8 +9,40 @@
         </div>
     </div>
     <div class="col-lg-12 my-3" style="text-align:right;">
-      <button pButton type="button" (onclick)="showDialogCreate()">Adicionar</button>
+      <button pButton type="button" (click)="showDialogCreate()">Adicionar</button>
     </div>
+    <p-dialog
+    header="Adicionar "
+    [(visible)]="displayDialog"
+    [breakpoints]="{ '960px': '75vw' }"
+    [style]="{ width: '50vw',height: '55vh' }"
+    [draggable]="false"
+    [resizable]="false"
+    >
+    <div class="container-form">
+      <div class="group-input">
+         <div class="text-info">Nome</div>
+         <input
+          class="input-form"
+          type="text"
+          name="Nome"
+          id="Nome"
+          [(ngModel)]="pessoaSelecionado.Nome"
+          placeholder="Nome"
+          required=""
+        />
+      </div>
+      <div class="group-input">
+        <div class="text-info">Perfil</div>
+        <p-dropdown [options]="perfils" class="input-form">
+        </p-dropdown>
+       </div>
+      </div>
+    <p-footer>
+      <button pButton type="button" label="Cancelar" (click)="displayDialog = false"></button>
+      <button pButton type="button" label="Salvar" (click)="createPessoa()" class="p-button-primary"></button>
+    </p-footer>
+  </p-dialog>
       <div class="card">
       <p-table
         [columns]="cols"
@@ -40,7 +72,7 @@
                 >
                 </p-button>
                 <p-button
-                  (disable)="showDialogDelete()"
+                  (click)="deletePessoa(rowData)"
                   icon="pi pi-trash"
                   styleClass="p-button-danger p-button-text"
                 ></p-button>
@@ -61,36 +93,28 @@
     [resizable]="false"
 >
   <div class="container-form">
-    <div class="group-input">
+      <div class="group-input">
+        <div class="text-info">Nome</div>
+        <input
+          class="input-form"
+          type="text"
+          name="Nome"
+          id="Nome"
+          [(ngModel)]="pessoaSelecionado.Nome"
+          placeholder="Nome"
+          required=""
+        />
+      </div>
 
-      <div class="text-info">ID</div>
-      <input
-        class="input-form"
-        type="text"
-        name="ID"
-        id="IDPessoa"
-        [(ngModel)]="pessoaSelecionado.ID"
-        placeholder="ID"
-        required=""
-      />
-       <div class="text-info">Nome</div>
-       <input
-        class="input-form"
-        type="text"
-        name="Nome"
-        id="Nome"
-        [(ngModel)]="pessoaSelecionado.Nome"
-        placeholder="Nome"
-        required=""
-      />
-    </div>
-
-    <!-- formControlName="IDPessoa" -->
-    <div class="group-input">
-      <div class="text-info">Perfil</div>
-      <p-dropdown [options]="perfils" class="input-form">
-      </p-dropdown>
-      <p-button icon="pi pi-save" (click)="save()" styleClass="p-button-rounded p-button-text"></p-button>
-    </div>
-  </div>
+      <!-- formControlName="IDPessoa" -->
+      <div class="group-input">
+        <div class="text-info">Perfil</div>
+        <p-dropdown [options]="perfils" class="input-form">
+        </p-dropdown>
+        </div>
+        </div>
+        <p-footer>
+          <button pButton type="button" label="Cancelar" (click)="displayDialog = false"></button>
+          <button pButton type="button" label="Salvar" (click)="createPessoa()" class="p-button-primary"></button>
+        </p-footer>
   </p-dialog>

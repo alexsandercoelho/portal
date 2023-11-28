@@ -16,9 +16,10 @@ export class PerfilComponent {
   perfilSelecionado: any = {
     Nome: ""
   };
-  perfils!: any[];
+  perfils: any[] = [];
   cols!: Column[];
   funcao!: any[];
+  displayDialog: boolean = false;
 
   constructor(
     private perfilService: PerfilService,
@@ -39,11 +40,25 @@ export class PerfilComponent {
           {field: 'Data Atualizacao', header: 'Data Atualizacao'}
       ];
   }
-  showDialogCreate(){
-    this.visible = true;
+  showDialogCreate() {
+    this.perfilSelecionado = {
+      nome: '',
+      dataInclusao: '2023-11-01T17:01:01Z',
+      dataAtualizacao: '2023-11-01T17:01:01Z'
+    };
+    this.displayDialog = true;
   }
-  showDialogEdit(item: any){
-    this.perfilSelecionado = {...item};
+  createPerfil() {
+    const newPerfil = { ...this.perfilSelecionado };
+    this.perfils.push(newPerfil);
+    console.log('Novo Perfil criada:', newPerfil);
+    this.displayDialog = false;
+  }
+
+
+
+  showDialogEdit(rowData: any){
+    this.perfilSelecionado = {...rowData};
     this.visible = true;
   }
   showDialogDelete(){
@@ -52,7 +67,7 @@ export class PerfilComponent {
     alert("Excluído com Sucesso!")
   }
   save(){
-    alert("Salvo com Sucesso!")
+    this.visible = false;
   }
 
 
