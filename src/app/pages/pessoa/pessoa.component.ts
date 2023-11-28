@@ -73,10 +73,6 @@ export class PessoaComponent {
       console.log('Falha ao excluir a Pessoa');
     }
   }
-  showDialogDelete(){
-    this.visible = false;
-    alert("Excluído com Sucesso!")
-  }
   save(){
   }
 
