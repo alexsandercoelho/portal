@@ -1,12 +1,22 @@
 .container-navbar {
-    background: #fefefe;
-    border: 1px solid #fefefe;
+
+    //background: #fefefe;
+    //border: 1px solid #fefefe;
     box-sizing: border-box;
+    background: #00003C;
 
     box-shadow: 0px 0.5px 2px rgb(53 51 52 / 16%);
-    height: 72px;
+    height: 62px;
     display:flex;
-     position: fixed;
-    width: -webkit-fill-available;
+   // position: fixed;
+    width: 100%;
     z-index: 9999;
+}
+.container-navbar p {
+  font-size: 25px;
+  align-items: center;
+  display: flex;
+  color :#fefefe;
+  padding-left: 18px;
+  justify-content: center;
 }

@@ -15,7 +15,7 @@ export class LoginService {
     private readonly baseUrl = environment["endPoint"];
 
     login(Email: string, Password: string) {
-        return this.httpClient.post<any>(`${this.baseUrl}/CreateToken`, { Email: Email, Password: Password });
+        return this.httpClient.post<any>(`${this.baseUrl}/CriarTokenIdentity`, { Email: Email, Password: Password });
     }
 
 }

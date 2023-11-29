@@ -12,8 +12,7 @@
 body {
   font-family: "Poppins";
   margin: 0;
-  background: #b4e7b6;
-
+  background: #00003c;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -21,6 +20,7 @@ body {
 }
 
 input {
+
   background: #ffffff;
   box-sizing: border-box;
   width: 397px;
@@ -38,7 +38,7 @@ input {
 
 .btn-primary {
   color: #fff;
-  background-color: #4caf50;
+  background-color: #00003c;
   border-color: #4caf50;
   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2),
   0 1px 5px 0 rgba(156, 39, 176, 0.12);
@@ -51,30 +51,34 @@ input {
  left: 60%;
 }
 .container-base {
-  padding: 88px 16px 0px 128px;
+  padding: 0px 8px 0px 118px;
+
 
   .content-page {
     background: white;
     padding: 16px;
     border-radius: 10px;
-    min-height: 800px;
+    min-height: 880px;
     min-width: 352px;
-
-
     .card-header {
       z-index: 3 !important;
       width: 100%;
       height: 80px;
-      background-color: #4caf50;
+      background-color: #00003c;
       box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
       border-radius: 8px;
       margin-bottom: 16px;
 
       .card-title {
         color: #fff;
-        padding: 16px;
+        padding-top: 26px;
+        justify-content: center;
         font-size: 16px;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
       }
     }
     .form-page {

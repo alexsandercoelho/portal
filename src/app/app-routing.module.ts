@@ -1,10 +1,8 @@
-import { EarlybirdsModule } from './pages/earlybirds/earlybirds.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { TableModule } from 'primeng/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { mudancaComponent } from './pages/mudanca/mudanca.component';
 const routes: Routes = [
   {
     path: '',
