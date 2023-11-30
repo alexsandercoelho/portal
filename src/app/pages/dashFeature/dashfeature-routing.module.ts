@@ -5,11 +5,12 @@ import { EarlybirdsComponent } from '../earlybirds/earlybirds.component';
 import { FlagsComponent } from '../flags/flags.component';
 import { mudancaComponent } from '../mudanca/mudanca.component';
 
-const routes: Routes = [
-  {
+
+const routes: Routes = [{
     path: '',
     component: DashFeatureComponent
-  },
+  }];
+  /*
   {
     path: '',
     component: EarlybirdsComponent
@@ -23,10 +24,10 @@ const routes: Routes = [
     component: mudancaComponent
   },
 ];
-
+*/
   @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+    declarations: []
   })
 
   export class DashFeatureRoutingModule{}

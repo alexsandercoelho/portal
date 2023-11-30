@@ -8,7 +8,6 @@ import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
-import { DashFeatureModule } from '../dashFeature/dashfeature.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MultiSelectModule } from 'primeng/multiselect';
@@ -19,9 +18,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
         imports: [
             CommonModule,
             EarlybirdsRoutingModule,
-            DashFeatureModule,
             NavbarModule,
-            SidebarModule,
             TableModule,
             ButtonModule,
             DialogModule,
@@ -29,6 +26,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
             FormsModule,
             ReactiveFormsModule,
             MultiSelectModule,
+            SidebarModule
         ]
     }
 )

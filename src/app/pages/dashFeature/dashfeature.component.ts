@@ -2,21 +2,24 @@ import { Component } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { Router } from '@angular/router';
 
+interface MenuItem {
+  id: number;
+  name: string;
+}
 @Component({
-  selector: 'sidebar',
+  selector: 'dashfeature',
   templateUrl: './dashfeature.component.html',
   styleUrls: ['./dashfeature.component.scss']
 })
 
 export class DashFeatureComponent {
-  constructor(private router: Router, public menuService: MenuService) {
-  }
-  ngOnInit() {
-    this.menuService.menuSelecionado = 0;
-  }
+  menus: MenuItem[] = [];
 
-  selectMenu(menu: number) {
-    switch (menu) {
+  constructor(public menuService: MenuService, private router: Router) {
+
+  }
+  selectMenu(menuId: number) {
+    switch (menuId) {
       case 0:
         this.router.navigate(['/painel']);
         break;
@@ -32,10 +35,8 @@ export class DashFeatureComponent {
       case 10:
           this.router.navigate(['/mudancas']);
           break;
-
-      default:
-        break;
     }
+    this.menuService.menuSelecionado = menuId;
 
   }
 

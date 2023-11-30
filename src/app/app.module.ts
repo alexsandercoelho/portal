@@ -6,7 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 //Primeng
 import { AccordionModule } from 'primeng/accordion';
 import { AutoCompleteModule } from 'primeng/autocomplete';
@@ -97,11 +97,13 @@ import { DashFeatureModule } from './pages/dashFeature/dashfeature.module';
 import { CheckboxModule } from 'primeng/checkbox';
 import { PessoaComponent } from './forms/pessoa/pessoa.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PessoaComponent,
+
 
 
 
@@ -118,6 +120,7 @@ import { PessoaComponent } from './forms/pessoa/pessoa.component';
     PanelMenuModule,
     DashFeatureModule,
     CheckboxModule,
+    MatSidenavModule,
 
   ],
   providers: [],

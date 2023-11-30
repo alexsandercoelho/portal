@@ -15,11 +15,7 @@ export class SidebarComponent {
 
   selectMenu(menu: number) {
     switch (menu) {
-      case 0:
-        this.router.navigate(['/painel']);
-        break;
-
-        case 1:
+       case 1:
         this.router.navigate(['/dashgestao']);
         break;
 

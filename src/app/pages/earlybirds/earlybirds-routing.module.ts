@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, RouterLink } from '@angular/router';
 import { EarlybirdsComponent } from './earlybirds.component';
 import { DashFeatureRoutingModule } from '../dashFeature/dashfeature-routing.module';
 
@@ -10,7 +10,7 @@ const routes: Routes = [{
 
   @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+     exports: [RouterModule]
   })
 
   export class EarlybirdsRoutingModule{}
