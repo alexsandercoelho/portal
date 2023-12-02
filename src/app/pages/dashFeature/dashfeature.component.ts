@@ -24,6 +24,10 @@ export class DashFeatureComponent {
         this.router.navigate(['/painel']);
         break;
 
+        case 2:
+        this.router.navigate(['/dashfeature']);
+        break;
+
       case 8:
         this.router.navigate(['/earlybirds']);
         break;

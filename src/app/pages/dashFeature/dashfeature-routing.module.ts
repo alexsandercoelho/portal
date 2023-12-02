@@ -10,21 +10,7 @@ const routes: Routes = [{
     path: '',
     component: DashFeatureComponent
   }];
-  /*
-  {
-    path: '',
-    component: EarlybirdsComponent
-  },
-  {
-    path: '',
-    component: FlagsComponent
-  },
-  {
-    path: '',
-    component: mudancaComponent
-  },
-];
-*/
+
   @NgModule({
     imports: [RouterModule.forChild(routes)],
     declarations: []

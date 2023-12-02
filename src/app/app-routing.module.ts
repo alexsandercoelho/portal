@@ -51,7 +51,7 @@ const routes: Routes = [
    path: 'earlybirds',
     loadChildren: () => import('./pages/earlybirds/earlybirds.module').then(m => m.EarlybirdsModule),
   },
-  {
+ {
     path: 'flags',
     loadChildren: () => import('./pages/flags/flags.module').then(m => m.FlagsModule),
   },
